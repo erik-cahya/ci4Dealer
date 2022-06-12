@@ -144,8 +144,7 @@
         <div class="row row justify-content-center mb-4">
             <div class="col-lg-12">
                 <div class="embed-responsive embed-responsive-16by9 ">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d246.51192586191996!2d115.22638475126163!3d-8.673396309172727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd240f24881c587%3A0xe8413f111e0aa096!2sInstitut%20Teknologi%20Dan%20Bisnis%20STIKOM%20BALI!5e0!3m2!1sid!2sid!4v1654358853514!5m2!1sid!2sid" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d301.74178806913113!2d115.22370758552117!3d-8.675893136236466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd240ee18590569%3A0x8b343efb25cb3b29!2sGg.%20XVII%20No.25%2C%20Panjer%2C%20Denpasar%20Selatan%2C%20Kota%20Denpasar%2C%20Bali%2080234!5e0!3m2!1sid!2sid!4v1655047667532!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </div>
@@ -155,7 +154,7 @@
                     <div class="info_item">
                         <i class="lnr lnr-home"></i>
                         <h6>Denpasar, Bali Indonesia</h6>
-                        <p>Jln. Tukad Badung XIV B</p>
+                        <p>Gg. XVII No.25, Panjer, Denpasar Selatan, <br>Kota Denpasar, Bali 80234</p>
                     </div>
                 </div>
             </div>

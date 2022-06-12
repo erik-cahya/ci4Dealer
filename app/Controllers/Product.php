@@ -9,6 +9,6 @@ class Product extends BaseController
         $data = [
             'title' => 'MotoShop | Product'
         ];
-        return view('/product/index', $data);
+        return view('/product/product', $data);
     }
 }
