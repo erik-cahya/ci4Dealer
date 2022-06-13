@@ -40,6 +40,11 @@ $routes->set404Override();
 // My Routes
 $routes->get('/', 'Pages::dashboard');
 $routes->get('about', 'Pages::about');
+$routes->get('login', 'Pages::login');
+$routes->get('register', 'Pages::register');
+$routes->get('penjualan', 'Pages::penjualan');
+
+
 $routes->get('product', 'Product::index');
 
 /*

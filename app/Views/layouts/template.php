@@ -16,21 +16,21 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
 
     <!-- CSS ============================================= -->
-    <link rel="stylesheet" href="/css/linearicons.css">
-    <link rel="stylesheet" href="/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/css/themify-icons.css">
-    <link rel="stylesheet" href="/css/owl.carousel.css">
-    <link rel="stylesheet" href="/css/nice-select.css">
-    <link rel="stylesheet" href="/css/nouislider.min.css">
-    <link rel="stylesheet" href="/css/ion.rangeSlider.css" />
-    <link rel="stylesheet" href="/css/ion.rangeSlider.skinFlat.css" />
-    <link rel="stylesheet" href="/css/magnific-popup.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>/css/linearicons.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>/css/font-awesome.min.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>/css/themify-icons.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>/css/owl.carousel.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>/css/nice-select.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>/css/nouislider.min.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>/css/ion.rangeSlider.css" />
+    <link rel="stylesheet" href="<?= base_url(); ?>/css/ion.rangeSlider.skinFlat.css" />
+    <link rel="stylesheet" href="<?= base_url(); ?>/css/magnific-popup.css">
 
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/main2.css">
-    <link rel="stylesheet" href="/css/util.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="fonts/iconic/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>/css/main.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>/css/main2.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>/css/util.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>/css/style.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>/fonts/iconic/css/material-design-iconic-font.min.css">
 </head>
 
 <body>

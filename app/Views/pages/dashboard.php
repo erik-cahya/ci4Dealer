@@ -144,7 +144,7 @@
         <div class="row row justify-content-center mb-4">
             <div class="col-lg-12">
                 <div class="embed-responsive embed-responsive-16by9 ">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d301.74178806913113!2d115.22370758552117!3d-8.675893136236466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd240ee18590569%3A0x8b343efb25cb3b29!2sGg.%20XVII%20No.25%2C%20Panjer%2C%20Denpasar%20Selatan%2C%20Kota%20Denpasar%2C%20Bali%2080234!5e0!3m2!1sid!2sid!4v1655047667532!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d301.74178806913113!2d115.22370758552117!3d-8.675893136236466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd240ee18590569%3A0x8b343efb25cb3b29!2sGg.%20XVII%20No.25%2C%20Panjer%2C%20Denpasar%20Selatan%2C%20Kota%20Denpasar%2C%20Bali%2080234!5e0!3m2!1sid!2sid!4v1655047667532!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </div>

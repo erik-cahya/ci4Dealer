@@ -6441,7 +6441,7 @@ label {
 }
 
 .tp_btn {
-  border: 1px solid #eeeeee;
+  border: 1px solid #f35345;
   display: inline-block;
   line-height: 38px;
   padding: 0px 40px;
@@ -6453,7 +6453,8 @@ label {
 }
 
 .tp_btn:hover {
-  background: #ffba00;
+  background: linear-gradient(90deg, rgba(255, 186, 0, 1) 0%, rgba(235, 51, 73, 1) 0%, rgba(244, 92, 67, 1) 100%);
+  ;
   color: #fff;
   border-color: #ffba00;
 }
@@ -8327,7 +8328,7 @@ label {
 }
 
 
-.search-product{
+.search-product {
   outline: none;
   border: none;
 }
