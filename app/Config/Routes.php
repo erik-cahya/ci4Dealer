@@ -43,9 +43,10 @@ $routes->get('about', 'Pages::about');
 $routes->get('login', 'Pages::login');
 $routes->get('register', 'Pages::register');
 $routes->get('penjualan', 'Pages::penjualan');
-
-
 $routes->get('product', 'Product::index');
+
+$routes->get('panel', 'Admin::index');
+$routes->get('panel/(:segment)', 'Admin::$1');
 
 /*
  * --------------------------------------------------------------------

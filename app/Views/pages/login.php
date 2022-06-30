@@ -27,7 +27,7 @@
                     <div class="hover">
                         <h4>Belum Punya Akun?</h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, dolorum?</p>
-                        <a class="primary-btn" href="registration.html">Create an Account</a>
+                        <a class="primary-btn" href="register">Create an Account</a>
                     </div>
                 </div>
             </div>

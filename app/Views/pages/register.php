@@ -27,7 +27,7 @@
                     <div class="hover">
                         <h4>Sudah Punya Akun?</h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, dolorum?</p>
-                        <a class="primary-btn" href="registration.html">Login Account</a>
+                        <a class="primary-btn" href="login">Login Account</a>
                     </div>
                 </div>
             </div>

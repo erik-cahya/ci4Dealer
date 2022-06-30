@@ -31,9 +31,7 @@
                     <ul class="nav navbar-nav navbar-right mt-2">
                         <li></li>
                         <li class="nav-item ">
-                            <a class="primary-btn mr-2" href="<?= base_url(); ?>/login">Login</a>
-                            <a class="primary-btn mr-2" href="<?= base_url(); ?>/register">Register</a>
-
+                            <a class="primary-btn mr-4" href="<?= base_url(); ?>/login">Login</a>
                         </li>
                     </ul>
                 </div>

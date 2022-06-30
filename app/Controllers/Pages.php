@@ -22,7 +22,7 @@ class Pages extends BaseController
         return view('/pages/about', $data);
     }
 
-    public function login()
+    public function login() 
     {
         $data = [
             'title' => 'Motoshop | Login'
@@ -43,7 +43,7 @@ class Pages extends BaseController
     public function register()
     {
         $data = [
-            'title' => 'MotoShop | Registes Account'
+            'title' => 'MotoShop | Register Account'
         ];
 
         return view('pages/register', $data);

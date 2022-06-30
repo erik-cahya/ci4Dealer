@@ -44,6 +44,20 @@
                             <input type="text" class="form-control" id="productName" name="productName" placeholder="Nama Barang">
                         </div>
 
+
+
+
+                        <div class="col-md-6 form-group ">
+                            <input type="text" class="form-control" id="first" name="name" placeholder="No Telepon">
+
+                        </div>
+
+                        <div class="col-md-6 form-group p_star">
+                            <input type="text" class="form-control" id="last" name="name" placeholder="Tahun Motor">
+                        </div>
+
+
+
                         <div class="col-md-12 form-group">
                             <textarea class="form-control" name="message" id="message" rows="1" placeholder="Alamat"></textarea>
                         </div>
