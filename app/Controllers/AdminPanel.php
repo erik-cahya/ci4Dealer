@@ -6,7 +6,10 @@ class AdminPanel extends BaseController
 {
     public function index()
     {
-        return view('adminPanel/index');
+        $data = [
+            'title' => 'MotoShop Panel | Login Panel'
+        ];
+        return view('adminPanel/login', $data);
     }
 
     public function dashboard()

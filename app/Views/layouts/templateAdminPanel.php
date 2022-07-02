@@ -44,14 +44,21 @@
 
 
 
+    <?= $this->renderSection("login"); ?>
+
     <div class="layout-wrapper layout-content-navbar">
         <div class="layout-container">
 
-            <?= $this->renderSection('content'); ?>
-            <?= $this->include('components/sidebarAdminPanel'); ?>
+            <?= $this->renderSection("content"); ?>
+
+            <?= ($title === "MotoShop Panel | Login Panel") ? '' : "this->include('components/sidebarAdminPanel')" ?>
+
+
 
         </div>
     </div>
+
+
 
 
 

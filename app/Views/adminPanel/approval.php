@@ -16,109 +16,136 @@
     <div class="container-xxl flex-grow-1 container-p-y">
       <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Admin Panel / </span>Approval Penjualan</h4>
 
-      <!-- Basic Bootstrap Table -->
-      <div class="card">
-        <h5 class="card-header">List Pengajuan</h5>
-        <div class="table-responsive text-nowrap">
-          <table class="table">
-            <thead>
-              <tr>
-                <th>No</th>
-                <th>Nama</th>
-                <th>Nama Barang</th>
-                <th>Status</th>
-                <th>Actions</th>
-              </tr>
-            </thead>
-            <tbody class="table-border-bottom-0">
+      <!-- Accordion -->
+      <h5 class="mt-4">Form Penjualan</h5>
+      <div class="row">
+        <div class="col-md mb-4 mb-md-0">
+          <div class="accordion mt-3" id="accordionExample">
 
-              <tr>
-                <td>1</td>
-                <td> <strong>Lorem Ipsum Dolor</strong></td>
-                <td>Esprit Ruffle Shirt </td>
 
-                <td><span class="badge bg-label-warning me-1">Pending</span></td>
-                <td>
-                  <div class="dropdown">
-                    <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
-                      <i class="bx bx-dots-vertical-rounded"></i>
-                    </button>
-                    <div class="dropdown-menu">
-                      <a class="dropdown-item" href="javascript:void(0);"><i class="bx bxs-show me-1"></i> Form Pengajuan</a>
-                      <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-check me-1"></i> Approve</a>
-                      <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-user-x me-1"></i> Reject</a>
-                      <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-trash me-1"></i> Delete</a>
+
+
+
+            <div class="card accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#accordionTwo" aria-expanded="false" aria-controls="accordionTwo">
+                  1. Erik Cahya Pradana
+                </button>
+              </h2>
+              <div id="accordionTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <div class="card mb-4">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                      <h5 class="mb-0">ADV 150 XG</h5>
+                      <p class="badge bg-label-success me-1 float-end">Live Product</p>
+                    </div>
+                    <div class="card-body">
+                      <form>
+                        <div class="mb-3">
+                          <label class="form-label" for="basic-default-fullname">Full Name</label>
+                          <input type="text" class="form-control" id="basic-default-fullname" placeholder="John Doe" />
+                        </div>
+                        <div class="mb-3">
+                          <label class="form-label" for="basic-default-company">Company</label>
+                          <input type="text" class="form-control" id="basic-default-company" placeholder="ACME Inc." />
+                        </div>
+                        <div class="mb-3">
+                          <label class="form-label" for="basic-default-email">Email</label>
+                          <div class="input-group input-group-merge">
+                            <input type="text" id="basic-default-email" class="form-control" placeholder="john.doe" aria-label="john.doe" aria-describedby="basic-default-email2" />
+                            <span class="input-group-text" id="basic-default-email2">@example.com</span>
+                          </div>
+                          <div class="form-text">You can use letters, numbers & periods</div>
+                        </div>
+                        <div class="mb-3">
+                          <label class="form-label" for="basic-default-phone">Phone No</label>
+                          <input type="text" id="basic-default-phone" class="form-control phone-mask" placeholder="658 799 8941" />
+                        </div>
+                        <div class="mb-3">
+                          <label class="form-label" for="basic-default-message">Message</label>
+                          <textarea id="basic-default-message" class="form-control" placeholder="Hi, Do you have a moment to talk Joe?"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-outline-primary">Approve</button>
+                        <button type="submit" class="btn btn-outline-danger">Reject</button>
+                      </form>
                     </div>
                   </div>
-                </td>
-              </tr>
+                </div>
+              </div>
+            </div>
 
-              <tr>
-                <td>1</td>
-                <td> <strong>Lorem Ipsum Dolor</strong></td>
-                <td>Esprit Ruffle Shirt </td>
+            <div class="card accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#accordionThree" aria-expanded="false" aria-controls="accordionThree">
+                  2. Kadek Panji Kusuma
+                </button>
+              </h2>
 
-                <td><span class="badge bg-label-warning me-1">Pending</span></td>
-                <td>
-                  <div class="dropdown">
-                    <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
-                      <i class="bx bx-dots-vertical-rounded"></i>
-                    </button>
-                    <div class="dropdown-menu">
-
-                      <a class="dropdown-item" href="javascript:void(0);"><i class="bx bxs-show me-1"></i> Form Pengajuan</a>
-
-                      <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-check me-1"></i> Approve</a>
-
-                      <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-user-x me-1"></i> Reject</a>
-
-                      <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-trash me-1"></i> Delete</a>
+              <div id="accordionThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <div class="card mb-4">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                      <h5 class="mb-0">Basic Layout</h5>
+                      <p class="badge bg-label-success me-1 float-end">Live Product</p>
+                    </div>
+                    <div class="card-body">
+                      <form>
+                        <div class="mb-3">
+                          <label class="form-label" for="basic-default-fullname">Full Name</label>
+                          <input type="text" class="form-control" id="basic-default-fullname" placeholder="John Doe" />
+                        </div>
+                        <div class="mb-3">
+                          <label class="form-label" for="basic-default-company">Company</label>
+                          <input type="text" class="form-control" id="basic-default-company" placeholder="ACME Inc." />
+                        </div>
+                        <div class="mb-3">
+                          <label class="form-label" for="basic-default-email">Email</label>
+                          <div class="input-group input-group-merge">
+                            <input type="text" id="basic-default-email" class="form-control" placeholder="john.doe" aria-label="john.doe" aria-describedby="basic-default-email2" />
+                            <span class="input-group-text" id="basic-default-email2">@example.com</span>
+                          </div>
+                          <div class="form-text">You can use letters, numbers & periods</div>
+                        </div>
+                        <div class="mb-3">
+                          <label class="form-label" for="basic-default-phone">Phone No</label>
+                          <input type="text" id="basic-default-phone" class="form-control phone-mask" placeholder="658 799 8941" />
+                        </div>
+                        <div class="mb-3">
+                          <label class="form-label" for="basic-default-message">Message</label>
+                          <textarea id="basic-default-message" class="form-control" placeholder="Hi, Do you have a moment to talk Joe?"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-outline-primary">Approve</button>
+                        <button type="submit" class="btn btn-outline-danger">Reject</button>
+                      </form>
                     </div>
                   </div>
-                </td>
-              </tr>
-
-
-              <tr>
-                <td>1</td>
-                <td> <strong>Lorem Ipsum Dolor</strong></td>
-                <td>Esprit Ruffle Shirt </td>
-
-                <td><span class="badge bg-label-danger me-1">Rejected</span></td>
-                <td>
-                  <div class="dropdown">
-                    <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
-                      <i class="bx bx-dots-vertical-rounded"></i>
-                    </button>
-                    <div class="dropdown-menu">
-
-                      <a class="dropdown-item" href="javascript:void(0);"><i class="bx bxs-show me-1"></i> Form Pengajuan</a>
-
-                      <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-check me-1"></i> Approve</a>
-
-                      <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-user-x me-1"></i> Reject</a>
-
-                      <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-trash me-1"></i> Delete</a>
-                    </div>
-                  </div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <br><br><br><br><br>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+
       </div>
-      <!--/ Basic Bootstrap Table -->
+      <!--/ Accordion -->
 
 
-      <hr class="my-5" />
 
 
+      </tbody>
 
 
     </div>
-    <!-- / Content -->
+    <!--/ Basic Bootstrap Table -->
+
+
+    <hr class="my-5" />
+
+
 
 
   </div>
-  <?= $this->endSection(); ?>
+  <!-- / Content -->
+
+
+</div>
+<?= $this->endSection(); ?>
