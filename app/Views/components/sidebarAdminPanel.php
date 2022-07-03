@@ -60,35 +60,56 @@
             <span class="menu-header-text">Seller</span>
         </li>
 
-        <li class="menu-item <?= ($title === "MotoShop Panel | Manage User Account") ? 'active' : '' ?>">
-            <a href="<?= base_url(); ?>/panel/manage_account" class="menu-link">
-                <i class='menu-icon tf bx bxs-user-account'></i>
-                Manage Account
-            </a>
+        <!-- Admin Account Menu  -->
+        <?php if ($permission === "Admin Account") : ?>
+            <li class="menu-item <?= ($title === "MotoShop Panel | Manage User Account") ? 'active' : '' ?>">
+                <a href="<?= base_url(); ?>/panel/manage_account" class="menu-link">
+                    <i class='menu-icon tf bx bxs-user-account'></i>
+                    Manage Account
+                </a>
+            </li>
 
-        <li class="menu-item 
+            <li class="menu-item 
         <?= ($title === "MotoShop Panel | List Motor") ? 'active open' : '' ?>
         <?= ($title === "MotoShop Panel | Form Approval") ? 'active open' : '' ?>">
 
-            <a href="javascript:void(0);" class="menu-link menu-toggle">
-                <i class="menu-icon tf-icons bx bxs-data"></i>
-                <div data-i18n="Account Settings">Manage Data Motor</div>
-            </a>
-            <ul class="menu-sub">
-                <li class="menu-item <?= ($title === "MotoShop Panel | List Motor") ? 'active' : '' ?>">
-                    <a href="<?= base_url(); ?>/panel/list_motor" class="menu-link">
-                        <div data-i18n="Account">List Motor</div>
-                    </a>
-                </li>
-                <li class="menu-item <?= ($title === "MotoShop Panel | Form Approval") ? 'active' : '' ?>">
-                    <a href="<?= base_url(); ?>/panel/approval" class="menu-link">
-                        <div data-i18n="Notifications">Approval Penjualan</div>
-                    </a>
-                </li>
-            </ul>
-        </li>
-        </li>
-        <!-- Seller Page End -->
+                <a href="javascript:void(0);" class="menu-link menu-toggle">
+                    <i class="menu-icon tf-icons bx bxs-data"></i>
+                    <div data-i18n="Account Settings">Manage Data Motor</div>
+                </a>
+                <ul class="menu-sub">
+                    <li class="menu-item <?= ($title === "MotoShop Panel | List Motor") ? 'active' : '' ?>">
+                        <a href="<?= base_url(); ?>/panel/list_motor" class="menu-link">
+                            <div data-i18n="Account">List Motor</div>
+                        </a>
+                    </li>
+                    <li class="menu-item <?= ($title === "MotoShop Panel | Form Approval") ? 'active' : '' ?>">
+                        <a href="<?= base_url(); ?>/panel/approval" class="menu-link">
+                            <div data-i18n="Notifications">Approval Penjualan</div>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        <?php endif ?>
+        <!-- /* Admin Account Menu -->
+        <!-- User Account Menu -->
+        <?php if ($permission === "User Account") : ?>
+            <li class="menu-item <?= ($title === "MotoShop Panel | Manage User Account") ? 'active' : '' ?>">
+                <a href="<?= base_url(); ?>/panel/manage_account" class="menu-link">
+                    <i class="menu-icon fa-solid fa-handshake-simple"></i>
+                    Ajukan Penjualan
+                </a>
+            </li>
+            <li class="menu-item <?= ($title === "MotoShop Panel | Manage User Account") ? 'active' : '' ?>">
+                <a href="<?= base_url(); ?>/panel/manage_account" class="menu-link">
+                    <i class="menu-icon fa-solid fa-motorcycle"></i>
+                    List Kendaraan
+                </a>
+            </li>
+        <?php endif; ?>
+        <!-- /* User Account Menu -->
+
+
         <!--  My Account Start -->
         <li class="menu-header small text-uppercase">
             <span class="menu-header-text">My Account</span>
@@ -99,9 +120,6 @@
                 Account
             </a>
         </li>
-        <!--  My Account End -->
-
-
-
+        <!--  /* My Account -->
 </aside>
 <!-- / Menu -->

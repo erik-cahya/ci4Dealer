@@ -19,6 +19,7 @@
 
     <!-- Icons. Uncomment required icon fonts -->
     <link rel="stylesheet" href="<?= base_url(); ?>/admin/assets/vendor/fonts/boxicons.css" />
+    <script src="https://kit.fontawesome.com/7ff899c0de.js" crossorigin="anonymous"></script>
 
     <!-- Core CSS -->
     <link rel="stylesheet" href="<?= base_url(); ?>/admin/assets/vendor/css/core.css" class="template-customizer-core-css" />
@@ -41,7 +42,6 @@
 </head>
 
 <body>
-
 
 
     <?= $this->renderSection("login"); ?>

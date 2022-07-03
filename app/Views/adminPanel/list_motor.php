@@ -31,8 +31,6 @@
               </tr>
             </thead>
             <tbody class="table-border-bottom-0">
-
-
               <tr>
                 <td>1</td>
                 <td> <strong>Erik Cahya Pradana</strong></td>

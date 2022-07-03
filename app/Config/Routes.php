@@ -45,8 +45,20 @@ $routes->get('register', 'Pages::register');
 $routes->get('penjualan', 'Pages::penjualan');
 $routes->get('product', 'Product::index');
 
-$routes->get('panel', 'AdminPanel::index');
-$routes->get('panel/(:segment)', 'AdminPanel::$1');
+
+$account = "admin";
+if ($account === "admin") {
+
+    // Admin Login Panel
+    $routes->get('panel', 'Pages::login',);
+    $routes->get('panel/(:segment)', 'AdminPanel::$1',);
+} else {
+    // User Login Panel
+    $routes->get('panel', 'UserPanel::index');
+    $routes->get('panel/(:segment)', 'UserPanel::$1');
+}
+
+
 
 /*
  * --------------------------------------------------------------------

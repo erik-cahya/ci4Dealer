@@ -15,7 +15,8 @@ class AdminPanel extends BaseController
     public function dashboard()
     {
         $data = [
-            'title' => 'MotoShop Panel | Dashboard'
+            'title' => 'MotoShop Panel | Dashboard',
+            'permission' => "Admin Account"
         ];
 
         return view('adminPanel/dashboard', $data);

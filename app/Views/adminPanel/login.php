@@ -115,9 +115,7 @@
             </div>
         </div>
     </div>
-
     <!-- / Content -->
-
     <!-- Core JS -->
     <!-- build:js assets/vendor/js/core.js -->
     <script src="<?= base_url(); ?>/admin/assets/vendor/libs/jquery/jquery.js"></script>
