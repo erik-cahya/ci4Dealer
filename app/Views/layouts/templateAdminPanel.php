@@ -51,7 +51,7 @@
 
             <?= $this->renderSection("content"); ?>
 
-            <?= ($title === "MotoShop Panel | Login Panel") ? '' : "this->include('components/sidebarAdminPanel')" ?>
+            <?= $this->include("components/sidebarAdminPanel"); ?>
 
 
 

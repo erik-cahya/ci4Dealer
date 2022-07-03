@@ -22,10 +22,6 @@
         <div class="col-md mb-4 mb-md-0">
           <div class="accordion mt-3" id="accordionExample">
 
-
-
-
-
             <div class="card accordion-item">
               <h2 class="accordion-header" id="headingTwo">
                 <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#accordionTwo" aria-expanded="false" aria-controls="accordionTwo">
@@ -37,37 +33,57 @@
                   <div class="card mb-4">
                     <div class="card-header d-flex justify-content-between align-items-center">
                       <h5 class="mb-0">ADV 150 XG</h5>
-                      <p class="badge bg-label-success me-1 float-end">Live Product</p>
+                      <p class="badge bg-label-warning me-1 float-end">Pending</p>
+                    </div>
+                    <div class="text-center">
+                      <img src="<?= base_url(); ?>/admin/assets/img/elements/13.jpg" class="rounded" alt="product-image" width="280px">
                     </div>
                     <div class="card-body">
                       <form>
-                        <div class="mb-3">
-                          <label class="form-label" for="basic-default-fullname">Full Name</label>
-                          <input type="text" class="form-control" id="basic-default-fullname" placeholder="John Doe" />
-                        </div>
-                        <div class="mb-3">
-                          <label class="form-label" for="basic-default-company">Company</label>
-                          <input type="text" class="form-control" id="basic-default-company" placeholder="ACME Inc." />
-                        </div>
-                        <div class="mb-3">
-                          <label class="form-label" for="basic-default-email">Email</label>
-                          <div class="input-group input-group-merge">
-                            <input type="text" id="basic-default-email" class="form-control" placeholder="john.doe" aria-label="john.doe" aria-describedby="basic-default-email2" />
-                            <span class="input-group-text" id="basic-default-email2">@example.com</span>
+                        <div class="row">
+
+                          <div class="mb-3 col-md-12">
+                            <label for="firstName" class="form-label">First Name</label>
+                            <input class="form-control" type="text" id="firstName" name="firstName" value="John" autofocus />
                           </div>
-                          <div class="form-text">You can use letters, numbers & periods</div>
+
+                          <div class="mb-3 col-md-12">
+                            <label for="firstName" class="form-label">Nama Kendaraan</label>
+                            <input class="form-control" type="text" id="firstName" name="firstName" value="John" autofocus />
+                          </div>
+
+                          <div class="mb-3 col-md-6">
+                            <label for="email" class="form-label">Harga Kendaraan</label>
+                            <input class="form-control" type="text" id="email" name="email" value="john.doe@example.com" placeholder="john.doe@example.com" />
+                          </div>
+                          <div class="mb-3 col-md-6">
+                            <label for="organization" class="form-label">Tahun Kendaraan</label>
+                            <input type="text" class="form-control" id="organization" name="organization" value="ThemeSelection" />
+                          </div>
+
+
+                          <div class="mb-3 col-md-6">
+                            <label for="organization" class="form-label">No Telepon</label>
+                            <input type="text" class="form-control" id="organization" name="organization" value="ThemeSelection" />
+                          </div>
+
+
+
+
+
+                          <div class="mb-3 col-md-6">
+                            <label for="address" class="form-label">E-Mail</label>
+                            <input type="text" class="form-control" id="address" name="address" placeholder="Address" />
+                          </div>
                         </div>
                         <div class="mb-3">
-                          <label class="form-label" for="basic-default-phone">Phone No</label>
-                          <input type="text" id="basic-default-phone" class="form-control phone-mask" placeholder="658 799 8941" />
-                        </div>
-                        <div class="mb-3">
-                          <label class="form-label" for="basic-default-message">Message</label>
+                          <label class="form-label" for="basic-default-message">Alamat</label>
                           <textarea id="basic-default-message" class="form-control" placeholder="Hi, Do you have a moment to talk Joe?"></textarea>
                         </div>
                         <button type="submit" class="btn btn-outline-primary">Approve</button>
                         <button type="submit" class="btn btn-outline-danger">Reject</button>
                       </form>
+
                     </div>
                   </div>
                 </div>
@@ -85,38 +101,67 @@
                 <div class="accordion-body">
                   <div class="card mb-4">
                     <div class="card-header d-flex justify-content-between align-items-center">
-                      <h5 class="mb-0">Basic Layout</h5>
-                      <p class="badge bg-label-success me-1 float-end">Live Product</p>
+                      <h5 class="mb-0">ADV 150 XG</h5>
+                      <p class="badge bg-label-danger me-1 float-end">Reject</p>
+                    </div>
+                    <div class="text-center">
+                      <img src="<?= base_url(); ?>/admin/assets/img/elements/13.jpg" class="rounded" alt="product-image" width="280px">
                     </div>
                     <div class="card-body">
                       <form>
-                        <div class="mb-3">
-                          <label class="form-label" for="basic-default-fullname">Full Name</label>
-                          <input type="text" class="form-control" id="basic-default-fullname" placeholder="John Doe" />
-                        </div>
-                        <div class="mb-3">
-                          <label class="form-label" for="basic-default-company">Company</label>
-                          <input type="text" class="form-control" id="basic-default-company" placeholder="ACME Inc." />
-                        </div>
-                        <div class="mb-3">
-                          <label class="form-label" for="basic-default-email">Email</label>
-                          <div class="input-group input-group-merge">
-                            <input type="text" id="basic-default-email" class="form-control" placeholder="john.doe" aria-label="john.doe" aria-describedby="basic-default-email2" />
-                            <span class="input-group-text" id="basic-default-email2">@example.com</span>
+                        <div class="row">
+
+                          <div class="mb-3 col-md-12">
+                            <label for="firstName" class="form-label">First Name</label>
+                            <input class="form-control" type="text" id="firstName" name="firstName" value="John" autofocus />
                           </div>
-                          <div class="form-text">You can use letters, numbers & periods</div>
+
+                          <div class="mb-3 col-md-12">
+                            <label for="firstName" class="form-label">Nama Kendaraan</label>
+                            <input class="form-control" type="text" id="firstName" name="firstName" value="John" autofocus />
+                          </div>
+
+                          <div class="mb-3 col-md-6">
+                            <label for="email" class="form-label">Harga Kendaraan</label>
+                            <input class="form-control" type="text" id="email" name="email" value="john.doe@example.com" placeholder="john.doe@example.com" />
+                          </div>
+
+
+
+                          <div class="mb-3 col-md-6">
+                            <label for="organization" class="form-label">Tahun Kendaraan</label>
+                            <input type="text" class="form-control" id="organization" name="organization" value="ThemeSelection" />
+                          </div>
+
+
+                          <div class="mb-3 col-md-6">
+                            <label for="organization" class="form-label">No Telepon</label>
+                            <input type="text" class="form-control" id="organization" name="organization" value="ThemeSelection" />
+                          </div>
+
+
+
+
+
+                          <div class="mb-3 col-md-6">
+                            <label for="address" class="form-label">E-Mail</label>
+                            <input type="text" class="form-control" id="address" name="address" placeholder="Address" />
+                          </div>
+
+
+
+
                         </div>
+
+
                         <div class="mb-3">
-                          <label class="form-label" for="basic-default-phone">Phone No</label>
-                          <input type="text" id="basic-default-phone" class="form-control phone-mask" placeholder="658 799 8941" />
-                        </div>
-                        <div class="mb-3">
-                          <label class="form-label" for="basic-default-message">Message</label>
+                          <label class="form-label" for="basic-default-message">Alamat</label>
                           <textarea id="basic-default-message" class="form-control" placeholder="Hi, Do you have a moment to talk Joe?"></textarea>
                         </div>
                         <button type="submit" class="btn btn-outline-primary">Approve</button>
                         <button type="submit" class="btn btn-outline-danger">Reject</button>
                       </form>
+
                     </div>
                   </div>
                 </div>
