@@ -7,7 +7,8 @@ class AdminPanel extends BaseController
     public function index()
     {
         $data = [
-            'title' => 'MotoShop Panel | Login Panel'
+            'title' => 'MotoShop Panel | Login Panel',
+            'permission' => "Admin Account"
         ];
         return view('adminPanel/login', $data);
     }
@@ -25,7 +26,8 @@ class AdminPanel extends BaseController
     public function account()
     {
         $data = [
-            'title' => 'MotoShop Panel | Account'
+            'title' => 'MotoShop Panel | Account',
+            'permission' => "Admin Account"
         ];
 
         return view('adminPanel/account', $data);
@@ -33,7 +35,8 @@ class AdminPanel extends BaseController
     public function manage_account()
     {
         $data = [
-            'title' => 'MotoShop Panel | Manage User Account'
+            'title' => 'MotoShop Panel | Manage User Account',
+            'permission' => "Admin Account"
         ];
 
         return view('adminPanel/manage_account', $data);
@@ -41,7 +44,8 @@ class AdminPanel extends BaseController
     public function approval()
     {
         $data = [
-            'title' => 'MotoShop Panel | Form Approval'
+            'title' => 'MotoShop Panel | Form Approval',
+            'permission' => "Admin Account"
         ];
 
         return view('adminPanel/approval', $data);
@@ -49,7 +53,8 @@ class AdminPanel extends BaseController
     public function list_motor()
     {
         $data = [
-            'title' => 'MotoShop Panel | List Motor'
+            'title' => 'MotoShop Panel | List Motor',
+            'permission' => "Admin Account"
         ];
 
         return view('adminPanel/list_motor', $data);

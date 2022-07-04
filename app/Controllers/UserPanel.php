@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 class UserPanel extends BaseController
 {
+
     public function index()
     {
         $data = [
@@ -19,5 +20,32 @@ class UserPanel extends BaseController
             'permission' => "User Account"
         ];
         return view('userPanel/dashboard', $data);
+    }
+
+    public function penjualan()
+    {
+        $data = [
+            'title' => 'MotoShop Panel | Form Pengajuan',
+            'permission' => "User Account"
+        ];
+        return view('userPanel/form_penjualan', $data);
+    }
+
+    public function list_kendaraan()
+    {
+        $data = [
+            'title' => 'MotoShop Panel | List Kendaraan',
+            'permission' => "User Account"
+        ];
+        return view('userPanel/list_kendaraan', $data);
+    }
+
+    public function account()
+    {
+        $data = [
+            'title' => 'MotoShop Panel | My Account',
+            'permission' => "User Account"
+        ];
+        return view('userPanel/account', $data);
     }
 }

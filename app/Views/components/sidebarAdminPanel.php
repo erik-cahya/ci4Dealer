@@ -94,14 +94,14 @@
         <!-- /* Admin Account Menu -->
         <!-- User Account Menu -->
         <?php if ($permission === "User Account") : ?>
-            <li class="menu-item <?= ($title === "MotoShop Panel | Manage User Account") ? 'active' : '' ?>">
-                <a href="<?= base_url(); ?>/panel/manage_account" class="menu-link">
+            <li class="menu-item <?= ($title === "MotoShop Panel | Form Pengajuan") ? 'active' : '' ?>">
+                <a href="<?= base_url(); ?>/panel/penjualan" class="menu-link">
                     <i class="menu-icon fa-solid fa-handshake-simple"></i>
                     Ajukan Penjualan
                 </a>
             </li>
-            <li class="menu-item <?= ($title === "MotoShop Panel | Manage User Account") ? 'active' : '' ?>">
-                <a href="<?= base_url(); ?>/panel/manage_account" class="menu-link">
+            <li class="menu-item <?= ($title === "MotoShop Panel | List Kendaraan") ? 'active' : '' ?>">
+                <a href="<?= base_url(); ?>/panel/list_kendaraan" class="menu-link">
                     <i class="menu-icon fa-solid fa-motorcycle"></i>
                     List Kendaraan
                 </a>
@@ -114,7 +114,7 @@
         <li class="menu-header small text-uppercase">
             <span class="menu-header-text">My Account</span>
         </li>
-        <li class="menu-item <?= ($title === "MotoShop Panel | Account") ? 'active' : '' ?>">
+        <li class="menu-item <?= ($title === "MotoShop Panel | My Account") ? 'active' : '' ?>">
             <a href="<?= base_url(); ?>/panel/account" class="menu-link">
                 <i class="menu-icon tf bx bxs-user"></i>
                 Account

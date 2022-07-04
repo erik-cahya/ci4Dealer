@@ -13,11 +13,12 @@
         <!-- Content -->
 
         <div class="container-xxl flex-grow-1 container-p-y">
+            <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Seller /</span> Dashboard</h4>
 
             <!-- Card layout -->
 
             <!-- Card Groups -->
-            <h6 class="pb-1 mb-4 text-muted">Kendaraan Saya</h6>
+
             <div class="card-group mb-5">
 
                 <div class="card">
