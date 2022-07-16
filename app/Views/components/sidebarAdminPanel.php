@@ -94,16 +94,11 @@
         <!-- /* Admin Account Menu -->
         <!-- User Account Menu -->
         <?php if ($permission === "User Account") : ?>
+
             <li class="menu-item <?= ($title === "MotoShop Panel | Form Pengajuan") ? 'active' : '' ?>">
-                <a href="<?= base_url(); ?>/panel/penjualan" class="menu-link">
-                    <i class="menu-icon fa-solid fa-handshake-simple"></i>
-                    Ajukan Penjualan
-                </a>
-            </li>
-            <li class="menu-item <?= ($title === "MotoShop Panel | List Kendaraan") ? 'active' : '' ?>">
-                <a href="<?= base_url(); ?>/panel/list_kendaraan" class="menu-link">
+                <a href="<?= base_url("/panel/penjualan"); ?>" class="menu-link">
                     <i class="menu-icon fa-solid fa-motorcycle"></i>
-                    List Kendaraan
+                    Order Kendaraan
                 </a>
             </li>
         <?php endif; ?>

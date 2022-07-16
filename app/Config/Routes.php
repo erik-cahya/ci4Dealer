@@ -46,7 +46,7 @@ $routes->get('penjualan', 'Pages::penjualan');
 $routes->get('product', 'Product::index');
 
 
-$account = "";
+$account = "admin";
 if ($account === "admin") {
 
     // Admin Login Panel

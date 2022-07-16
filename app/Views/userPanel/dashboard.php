@@ -48,62 +48,6 @@
                 </div>
 
 
-                <div class="card">
-                    <img class="card-img-top" src="<?= base_url(); ?>/admin/assets/img/elements/5.jpg" alt="Card image cap" />
-                    <div class="card-body">
-                        <div class="card-title">
-                            <span class="card-title h5">Supra X 250 CC </span>
-                            <span class="float-end badge bg-label-primary">Live Product</span>
-                        </div>
-                        <small class="text-muted">Rp. 25.000.000</small>
-                        <p class="card-text mt-2">
-                            This is a wider card with supporting text below as a natural lead-in to additional content. This
-                            content is a little bit longer.
-                        </p>
-                    </div>
-                    <div class="card-footer">
-                        <small class="text-muted">Uploaded 20 Januari 2022</small>
-
-                        <button type="button" class="btn p-0 dropdown-toggle hide-arrow float-end" data-bs-toggle="dropdown">
-                            <i class='bx bx-menu-alt-right'></i>
-                        </button>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-edit-alt me-1"></i> Edit</a>
-                            <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-trash me-1"></i> Delete</a>
-                        </div>
-                    </div>
-
-
-
-
-                </div>
-
-
-                <div class="card">
-                    <img class="card-img-top" src="<?= base_url(); ?>/admin/assets/img/elements/1.jpg" alt="Card image cap" />
-                    <div class="card-body">
-                        <div class="card-title">
-                            <span class="card-title h5">Supra X 250 CC </span>
-                            <span class="float-end badge bg-label-primary">Live Product</span>
-                        </div>
-                        <small class="text-muted">Rp. 25.000.000</small>
-                        <p class="card-text mt-2">
-                            This is a wider card with supporting text below as a natural lead-in to additional content. This
-                            content is a little bit longer.
-                        </p>
-                    </div>
-                    <div class="card-footer">
-                        <small class="text-muted">Uploaded 20 Januari 2022</small>
-
-                        <button type="button" class="btn p-0 dropdown-toggle hide-arrow float-end" data-bs-toggle="dropdown">
-                            <i class='bx bx-menu-alt-right'></i>
-                        </button>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-edit-alt me-1"></i> Edit</a>
-                            <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-trash me-1"></i> Delete</a>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
         <!-- / Content -->

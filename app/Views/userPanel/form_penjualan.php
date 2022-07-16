@@ -12,11 +12,11 @@
     <div class="content-wrapper">
         <!-- Content -->
         <div class="container-xxl flex-grow-1 container-p-y">
-            <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Seller /</span> Ajukan Penjualan</h4>
+            <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Pembeli /</span> Order Kendaraan</h4>
 
             <!-- Card layout -->
             <div class="card mb-4">
-                <h5 class="card-header">Profile Details</h5>
+                <h5 class="card-header">Detail Kendaraan</h5>
                 <!-- Account -->
                 <div class="card-body">
                     <div class="d-flex align-items-start align-items-sm-center gap-4">
@@ -37,18 +37,8 @@
                     <form id="formAccountSettings" method="POST" onsubmit="return false">
                         <div class="row">
                             <div class="mb-3 col-md-12">
-                                <label for="firstName" class="form-label">Nama Pemilik</label>
+                                <label for="firstName" class="form-label">Nama Kendaraan</label>
                                 <input class="form-control" type="text" id="firstName" name="firstName" placeholder="Nama Pemilik Kendaraan" autofocus />
-                            </div>
-
-                            <div class="mb-3 col-md-6">
-                                <label for="address" class="form-label">Nama Kendaraan</label>
-                                <input type="text" class="form-control" id="address" name="address" placeholder="Masukkan Nama Kendaraan" />
-                            </div>
-
-                            <div class="mb-3 col-md-6">
-                                <label for="state" class="form-label">Tahun Kendaraan</label>
-                                <input class="form-control" type="text" id="state" name="state" placeholder="Masukkan Tahun Kendaraan" />
                             </div>
 
                             <div class="mb-3 col-md-6">
@@ -59,18 +49,21 @@
                                 </div>
                             </div>
 
-                            <div class=" mb-3 col-md-6">
-                                <label class="form-label" for="phoneNumber">Nomor Telepon</label>
-                                <input type="text" id="phoneNumber" name="phoneNumber" class="form-control" placeholder="Masukkan Nomor Telepon" />
+                            <div class="mb-3 col-md-6">
+                                <label for="state" class="form-label">Tahun Kendaraan</label>
+                                <input class="form-control" type="text" id="state" name="state" placeholder="Masukkan Tahun Kendaraan" />
                             </div>
 
+
+
+
                             <div class="mb-3">
-                                <label class="form-label" for="basic-default-message">Address</label>
+                                <label class="form-label" for="basic-default-message">Detail Kendaraan</label>
                                 <textarea id="basic-default-message" class="form-control" placeholder="Masukkan Alamat Lengkap"></textarea>
                             </div>
                         </div>
                         <div class="mt-2">
-                            <button type="submit" class="btn btn-primary me-2">Save changes</button>
+                            <button type="submit" class="btn btn-danger me-2">Ajukan Order</button>
                             <button type="reset" class="btn btn-outline-secondary">Cancel</button>
                         </div>
                     </form>

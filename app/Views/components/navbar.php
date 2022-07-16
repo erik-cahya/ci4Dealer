@@ -15,23 +15,19 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
                     <ul class="nav navbar-nav menu_nav ml-auto">
-                        <li class="nav-item <?= ($title === "MotoShop | Dashboard") ? 'active' : ' ' ?>"><a class="nav-link" href="<?= base_url(); ?>/">Home</a></li>
+                        <li class="nav-item <?= ($title === "MotoShop | Dashboard") ? 'active' : ' ' ?>"><a class="nav-link" href="<?= base_url("/"); ?>">Home</a></li>
 
                         <!-- Produk -->
-                        <li class="nav-item submenu dropdown <?= ($title === "MotoShop | Product") ? 'active' : '' ?>">
-                            <a href="#" class="nav-link dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true">Produk</a>
-                            <ul class="dropdown-menu">
-                                <li class="nav-item"><a class="nav-link" href="<?= base_url(); ?>/product">Motor</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item <?= ($title === "MotoShop | About") ? 'active' : '' ?>"><a class="nav-link" href="<?= base_url(); ?>/about">Tentang Kami</a></li>
-                        <li class="nav-item <?= ($title === "MotoShop | Form Penjualan") ? 'active' : '' ?>"><a class="nav-link" href="<?= base_url(); ?>/penjualan">Form Penjualan</a></li>
+
+                        <li class="nav-item <?= ($title === "MotoShop | About") ? 'active' : '' ?>"><a class="nav-link" href="<?= base_url("/product"); ?>">Produk</a></li>
+                        <li class="nav-item <?= ($title === "MotoShop | About") ? 'active' : '' ?>"><a class="nav-link" href="<?= base_url("/about"); ?>">Tentang Kami</a></li>
+                        <li class="nav-item <?= ($title === "MotoShop | Form Penjualan") ? 'active' : '' ?>"><a class="nav-link" href="<?= base_url("/penjualan"); ?>">Form Penjualan</a></li>
 
                     </ul>
                     <ul class="nav navbar-nav navbar-right mt-2">
                         <li></li>
                         <li class="nav-item ">
-                            <a class="primary-btn mr-4" href="<?= base_url(); ?>/login">Login</a>
+                            <a class="primary-btn mr-4" href="<?= base_url("/login"); ?>">Login</a>
                         </li>
                     </ul>
                 </div>
