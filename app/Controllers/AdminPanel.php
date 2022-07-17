@@ -2,8 +2,16 @@
 
 namespace App\Controllers;
 
+use App\Models\UserModel;
+
 class AdminPanel extends BaseController
 {
+
+    public function __construct()
+    {
+        $this->userModel = new UserModel();
+    }
+
     public function index()
     {
         $data = [
@@ -36,7 +44,8 @@ class AdminPanel extends BaseController
     {
         $data = [
             'title' => 'MotoShop Panel | Manage User Account',
-            'permission' => "Admin Account"
+            'permission' => "Admin Account",
+            'dataUser' => $this->userModel->getUser()
         ];
 
         return view('adminPanel/manage_account', $data);
