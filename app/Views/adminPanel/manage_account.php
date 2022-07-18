@@ -37,7 +37,7 @@
                   <td>1</td>
                   <td>
                     <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
-                      <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="avatar avatar-lg pull-up" title="Lilian Fuller">
+                      <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="avatar avatar-lg pull-up" title="<?= $user['nama_user']; ?>">
                         <img src="<?= base_url(); ?>/admin/assets/img/avatars/<?= $user['avatar']; ?>" alt="Avatar" class="rounded-circle" />
                       </li>
                     </ul>

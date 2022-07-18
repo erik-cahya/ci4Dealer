@@ -17,4 +17,9 @@ class UserModel extends Model
         }
         return $this->where(['id_user' => $id_user])->first();
     }
+
+    public function countUser()
+    {
+        return $this->countAllResults();
+    }
 }

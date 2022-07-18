@@ -20,7 +20,7 @@
                         <!-- Produk -->
 
                         <li class="nav-item <?= ($title === "MotoShop | About") ? 'active' : '' ?>"><a class="nav-link" href="<?= base_url("/product"); ?>">Produk</a></li>
-                        <li class="nav-item <?= ($title === "MotoShop | About") ? 'active' : '' ?>"><a class="nav-link" href="<?= base_url("/about"); ?>">Tentang Kami</a></li>
+
                         <li class="nav-item <?= ($title === "MotoShop | Form Penjualan") ? 'active' : '' ?>"><a class="nav-link" href="<?= base_url("/penjualan"); ?>">Form Penjualan</a></li>
 
                     </ul>

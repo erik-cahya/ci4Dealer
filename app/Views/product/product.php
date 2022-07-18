@@ -38,17 +38,17 @@
                     <button class="size-113 flex-c-m fs-16 cl2 hov-cl1 trans-04">
                         <i class="zmdi zmdi-search"></i>
                     </button>
-                    <input class="mtext-107 cl2 size-114 plh2 p-r-15 search-product" type="text" name="search-product" placeholder="Search">
+                    <input class="mtext-107 cl2 size-114 plh2 p-r-15 search-product quicksearch" type="text" name="search-product" placeholder="Search Kendaraan">
                 </div>
             </div>
         </div>
 
-        <div class="row isotope-grid">
+        <div class="row isotope-grid grid">
 
             <!-- Product bekas -->
             <?php $number = 1 ?>
             <?php foreach ($product as $prd) : ?>
-                <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item bekas">
+                <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 element-item">
                     <!-- Block2 -->
                     <div class="block2">
                         <div class="block2-pic hov-img0">

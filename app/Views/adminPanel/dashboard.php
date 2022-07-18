@@ -32,7 +32,7 @@
                 </div>
               </div>
               <span class="fw-semibold d-block mb-1">Total Seller</span>
-              <h3 class="card-title mb-2">12</h3>
+              <h3 class="card-title mb-2"><?= $countUser; ?></h3>
             </div>
           </div>
         </div>
@@ -50,12 +50,11 @@
                   </button>
                   <div class="dropdown-menu dropdown-menu-end" aria-labelledby="cardOpt3">
                     <a class="dropdown-item" href="javascript:void(0);">View More</a>
-
                   </div>
                 </div>
               </div>
               <span class="fw-semibold d-block mb-1">Total Produk </span>
-              <h3 class="card-title mb-2">23</h3>
+              <h3 class="card-title mb-2"><?= $countProduct; ?></h3>
             </div>
           </div>
         </div>
@@ -89,65 +88,29 @@
             <h5 class="card-header">Users</h5>
             <div class="card-body">
 
-              <div class="d-flex mb-3">
-                <div class="flex-shrink-0">
-                  <img src="<?= base_url(); ?>/admin/assets/img/avatars/1.png" alt="facebook" class="me-3 rounded-circle" height="40" />
-                </div>
-                <div class="flex-grow-1 row">
-                  <div class="col-8 col-sm-7 mb-sm-0 mb-2">
-                    <h6 class="mb-0">Erik Cahya Pradana</h6>
-                    <small class="text-muted">Not Connected</small>
-                  </div>
-                  <div class="col-4 col-sm-5 text-end">
-                    <button type="button" class="btn btn-icon btn-outline-warning">
-                      <i class="bx bxs-edit-alt"></i>
-                    </button>
-                    <button type="button" class="btn btn-icon btn-outline-danger">
-                      <i class="bx bx-trash-alt"></i>
-                    </button>
-                  </div>
-                </div>
-              </div>
 
-              <div class="d-flex mb-3">
-                <div class="flex-shrink-0">
-                  <img src="<?= base_url(); ?>/admin/assets/img/avatars/1.png" alt="facebook" class="me-3 rounded-circle" height="40" />
-                </div>
-                <div class="flex-grow-1 row">
-                  <div class="col-8 col-sm-7 mb-sm-0 mb-2">
-                    <h6 class="mb-0">Erik Cahya Pradana</h6>
-                    <small class="text-muted">Not Connected</small>
+              <?php foreach ($dataUser as $user) : ?>
+                <div class="d-flex mb-3">
+                  <div class="flex-shrink-0">
+                    <img src="<?= base_url(); ?>/admin/assets/img/avatars/<?= $user["avatar"]; ?>" alt="facebook" class="me-3 rounded-circle" height="40" />
                   </div>
-                  <div class="col-4 col-sm-5 text-end">
-                    <button type="button" class="btn btn-icon btn-outline-warning">
-                      <i class="bx bxs-edit-alt"></i>
-                    </button>
-                    <button type="button" class="btn btn-icon btn-outline-danger">
-                      <i class="bx bx-trash-alt"></i>
-                    </button>
+                  <div class="flex-grow-1 row">
+                    <div class="col-8 col-sm-7 mb-sm-0 mb-2">
+                      <h6 class="mb-0"><?= $user["nama_user"]; ?></h6>
+                      <small class="text-muted">Active User</small>
+                    </div>
+                    <div class="col-4 col-sm-5 text-end">
+                      <button type="button" class="btn btn-icon btn-outline-warning">
+                        <i class="bx bxs-edit-alt"></i>
+                      </button>
+                      <button type="button" class="btn btn-icon btn-outline-danger">
+                        <i class="bx bx-trash-alt"></i>
+                      </button>
+                    </div>
                   </div>
                 </div>
-              </div>
+              <?php endforeach; ?>
 
-              <div class="d-flex mb-3">
-                <div class="flex-shrink-0">
-                  <img src="<?= base_url(); ?>/admin/assets/img/avatars/1.png" alt="facebook" class="me-3 rounded-circle" height="40" />
-                </div>
-                <div class="flex-grow-1 row">
-                  <div class="col-8 col-sm-7 mb-sm-0 mb-2">
-                    <h6 class="mb-0">Erik Cahya Pradana</h6>
-                    <small class="text-muted">Not Connected</small>
-                  </div>
-                  <div class="col-4 col-sm-5 text-end">
-                    <button type="button" class="btn btn-icon btn-outline-warning">
-                      <i class="bx bxs-edit-alt"></i>
-                    </button>
-                    <button type="button" class="btn btn-icon btn-outline-danger">
-                      <i class="bx bx-trash-alt"></i>
-                    </button>
-                  </div>
-                </div>
-              </div>
 
 
 

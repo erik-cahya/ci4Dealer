@@ -52,6 +52,7 @@ if ($account === "admin") {
     // Admin Login Panel
     $routes->get('panel', 'Pages::login',);
     $routes->get('panel/(:segment)', 'AdminPanel::$1',);
+    $routes->post('panel/save', 'AdminPanel::save');
 } else {
     // User Login Panel
     $routes->get('panel', 'UserPanel::index');

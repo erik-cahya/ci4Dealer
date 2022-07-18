@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 17, 2022 at 08:26 PM
+-- Generation Time: Jul 18, 2022 at 08:54 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -55,6 +55,7 @@ CREATE TABLE `tb_product` (
   `harga_product` varchar(20) NOT NULL,
   `tahun` varchar(20) NOT NULL,
   `id_user` int(11) NOT NULL,
+  `detail_kendaraan` text NOT NULL,
   `gambar_product` varchar(100) NOT NULL,
   `updated_at` datetime NOT NULL,
   `created_at` datetime NOT NULL
@@ -64,8 +65,14 @@ CREATE TABLE `tb_product` (
 -- Dumping data for table `tb_product`
 --
 
-INSERT INTO `tb_product` (`id_product`, `nama_product`, `harga_product`, `tahun`, `id_user`, `gambar_product`, `updated_at`, `created_at`) VALUES
-(1, 'Yamaha Mio', '12000000', '2012', 1, 'p1.png', '2022-07-17 19:48:49', '2022-07-17 19:48:49');
+INSERT INTO `tb_product` (`id_product`, `nama_product`, `harga_product`, `tahun`, `id_user`, `detail_kendaraan`, `gambar_product`, `updated_at`, `created_at`) VALUES
+(1, 'Yamaha Mio', '12000000', '2012', 1, '', 'p1.png', '2022-07-17 19:48:49', '2022-07-17 19:48:49'),
+(2, 'Yamaha Fortuna', '2011', '2022', 1, '', 'p1.png', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(3, 'Yamaha Shogun', '20112', '20118', 1, '', 'p1.png', '2022-07-18 11:34:59', '2022-07-18 11:34:59'),
+(6, 'Coba flash data', '14213', 'sdfsd', 1, '', 'p1.png', '2022-07-18 11:47:38', '2022-07-18 11:47:38'),
+(7, 'Satria FU', '12450000', '2003', 1, 'Ini adalah kendaraan pada tahun 201904 yang digunakan untuk ngarit', 'p1.png', '2022-07-18 11:50:01', '2022-07-18 11:50:01'),
+(8, 'sfgjeiorfj', '12245', '129489023', 1, 'fwegferg', 'p2.png', '2022-07-18 12:29:34', '2022-07-18 12:29:34'),
+(9, 'Tambah Produk Motor Baru', '38759', '128947', 1, 'Ini adalah produk baru pada tahun 2022', 'p3.png', '2022-07-18 13:24:20', '2022-07-18 13:24:20');
 
 -- --------------------------------------------------------
 
@@ -129,7 +136,7 @@ ALTER TABLE `tb_account`
 -- AUTO_INCREMENT for table `tb_product`
 --
 ALTER TABLE `tb_product`
-  MODIFY `id_product` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_product` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `tb_user`

@@ -57,7 +57,7 @@
 
         <!-- Seller Page Start -->
         <li class="menu-header small text-uppercase">
-            <span class="menu-header-text">Seller</span>
+            <span class="menu-header-text">ADMIN MENU</span>
         </li>
 
         <!-- Admin Account Menu  -->
@@ -71,21 +71,29 @@
 
             <li class="menu-item 
         <?= ($title === "MotoShop Panel | List Motor") ? 'active open' : '' ?>
+        <?= ($title === "MotoShop Panel | Form Tambah Kendaraan") ? 'active open' : '' ?>
         <?= ($title === "MotoShop Panel | Form Approval") ? 'active open' : '' ?>">
 
                 <a href="javascript:void(0);" class="menu-link menu-toggle">
                     <i class="menu-icon tf-icons bx bxs-data"></i>
-                    <div data-i18n="Account Settings">Manage Data Motor</div>
+                    <div>Manage Data Motor</div>
                 </a>
                 <ul class="menu-sub">
-                    <li class="menu-item <?= ($title === "MotoShop Panel | List Motor") ? 'active' : '' ?>">
-                        <a href="<?= base_url(); ?>/panel/list_motor" class="menu-link">
-                            <div data-i18n="Account">List Motor</div>
+                    <li class="menu-item <?= ($title === "MotoShop Panel | Form Tambah Kendaraan") ? 'active' : '' ?>">
+                        <a href="<?= base_url('/panel/tambah_kendaraan'); ?>" class="menu-link">
+                            <div>Tambah Kendaraan</div>
                         </a>
                     </li>
+
+                    <li class="menu-item <?= ($title === "MotoShop Panel | List Motor") ? 'active' : '' ?>">
+                        <a href="<?= base_url('/panel/list_motor'); ?>" class="menu-link">
+                            <div>List Motor</div>
+                        </a>
+                    </li>
+
                     <li class="menu-item <?= ($title === "MotoShop Panel | Form Approval") ? 'active' : '' ?>">
-                        <a href="<?= base_url(); ?>/panel/approval" class="menu-link">
-                            <div data-i18n="Notifications">Approval Penjualan</div>
+                        <a href="<?= base_url('/panel/approval'); ?>" class="menu-link">
+                            <div>Approval Penjualan</div>
                         </a>
                     </li>
                 </ul>
