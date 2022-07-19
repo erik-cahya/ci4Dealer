@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 18, 2022 at 08:54 PM
--- Server version: 10.4.24-MariaDB
--- PHP Version: 8.1.6
+-- Generation Time: Jul 19, 2022 at 12:41 PM
+-- Server version: 10.4.20-MariaDB
+-- PHP Version: 7.4.21
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -32,16 +32,17 @@ CREATE TABLE `tb_account` (
   `username` varchar(50) NOT NULL,
   `password` varchar(50) NOT NULL,
   `id_user` int(11) NOT NULL,
-  `level` int(11) NOT NULL
+  `level` int(11) NOT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `tb_account`
 --
 
-INSERT INTO `tb_account` (`id_account`, `username`, `password`, `id_user`, `level`) VALUES
-(1, 'erikcp', '112233', 1, 1),
-(2, 'rizky12', '334221', 2, 1);
+INSERT INTO `tb_account` (`id_account`, `username`, `password`, `id_user`, `level`, `created_at`, `updated_at`) VALUES
+(8, 'AAWA010394', 'asdasdasd', 24, 1, '2022-07-19 03:03:20', '2022-07-19 03:03:20');
 
 -- --------------------------------------------------------
 
@@ -72,7 +73,8 @@ INSERT INTO `tb_product` (`id_product`, `nama_product`, `harga_product`, `tahun`
 (6, 'Coba flash data', '14213', 'sdfsd', 1, '', 'p1.png', '2022-07-18 11:47:38', '2022-07-18 11:47:38'),
 (7, 'Satria FU', '12450000', '2003', 1, 'Ini adalah kendaraan pada tahun 201904 yang digunakan untuk ngarit', 'p1.png', '2022-07-18 11:50:01', '2022-07-18 11:50:01'),
 (8, 'sfgjeiorfj', '12245', '129489023', 1, 'fwegferg', 'p2.png', '2022-07-18 12:29:34', '2022-07-18 12:29:34'),
-(9, 'Tambah Produk Motor Baru', '38759', '128947', 1, 'Ini adalah produk baru pada tahun 2022', 'p3.png', '2022-07-18 13:24:20', '2022-07-18 13:24:20');
+(9, 'Tambah Produk Motor Baru', '38759', '128947', 1, 'Ini adalah produk baru pada tahun 2022', 'p3.png', '2022-07-18 13:24:20', '2022-07-18 13:24:20'),
+(10, 'Test Data Baru', '12345', '2114', 1, 'Ini adalah data yang dikirimkan baru', '1.png', '2022-07-19 02:00:54', '2022-07-19 02:00:54');
 
 -- --------------------------------------------------------
 
@@ -96,8 +98,7 @@ CREATE TABLE `tb_user` (
 --
 
 INSERT INTO `tb_user` (`id_user`, `nama_user`, `no_telepon`, `email`, `alamat`, `avatar`, `created_at`, `updated_at`) VALUES
-(1, 'Erik Cahya Pradana', '089522648527', 'erik.cahya841@gmail.com', 'Jln. Tukad Badung XIV B No. 4', '6.png', NULL, NULL),
-(2, 'Kadek Rizky', '182904809', 'rizky@gmail.com', 'Jln. Denpasar', '5.png', NULL, NULL);
+(24, 'Erik Cahya Pradana', '089522648527', 'erikcp38@gmail.com', 'Jln. Tukad Badung XIV B', '1.png', '2022-07-19 03:03:20', '2022-07-19 03:03:20');
 
 --
 -- Indexes for dumped tables
@@ -130,19 +131,19 @@ ALTER TABLE `tb_user`
 -- AUTO_INCREMENT for table `tb_account`
 --
 ALTER TABLE `tb_account`
-  MODIFY `id_account` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_account` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `tb_product`
 --
 ALTER TABLE `tb_product`
-  MODIFY `id_product` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_product` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `tb_user`
 --
 ALTER TABLE `tb_user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- Constraints for dumped tables
@@ -152,7 +153,7 @@ ALTER TABLE `tb_user`
 -- Constraints for table `tb_account`
 --
 ALTER TABLE `tb_account`
-  ADD CONSTRAINT `tb_account_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `tb_user` (`id_user`) ON DELETE NO ACTION ON UPDATE CASCADE;
+  ADD CONSTRAINT `tb_account_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `tb_user` (`id_user`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
