@@ -87,13 +87,13 @@
 
                     <li class="menu-item <?= ($title === "MotoShop Panel | List Motor") ? 'active' : '' ?>">
                         <a href="<?= base_url('/panel/list_motor'); ?>" class="menu-link">
-                            <div>List Motor</div>
+                            <div>List Kendaraan</div>
                         </a>
                     </li>
 
                     <li class="menu-item <?= ($title === "MotoShop Panel | Form Approval") ? 'active' : '' ?>">
                         <a href="<?= base_url('/panel/approval'); ?>" class="menu-link">
-                            <div>Approval Penjualan</div>
+                            <div>Approval Order</div>
                         </a>
                     </li>
                 </ul>

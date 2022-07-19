@@ -52,14 +52,16 @@
                       <th>Profile</th>
                       <th>Nama</th>
                       <th>Username</th>
-                      <th>Status</th>
+                      <th>E-Mail</th>
                       <th>Actions</th>
                     </tr>
                   </thead>
                   <tbody class="table-border-bottom-0">
+
+                    <?php $no = 1; ?>
                     <?php foreach ($dataUser as $user) : ?>
                       <tr>
-                        <td>1</td>
+                        <td><?= $no; ?></td>
                         <td>
                           <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="avatar avatar-lg pull-up" title="<?= $user['nama_user']; ?>">
@@ -70,7 +72,7 @@
                         <td> <strong><?= $user['nama_user']; ?></strong></td>
                         <td><?= $user['username']; ?></td>
 
-                        <td><span class="badge bg-label-primary me-1">Active</span></td>
+                        <td><?= $user['email']; ?></td>
                         <td>
                           <div class="dropdown">
                             <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
@@ -78,7 +80,11 @@
                             </button>
                             <div class="dropdown-menu">
 
-                              <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-edit-alt me-1"></i> Edit</a>
+                              <!-- Button Edit -->
+                              <a class="dropdown-item" href="/panel/editUser/<?= $user["id_user"]; ?>"><i class="bx bx-edit-alt me-1"></i> Edit</a>
+                              <!-- /*Button Edit -->
+
+
                               <!-- Button Delete -->
                               <form action="/panel/<?= $user['id_user']; ?>" method="POST">
                                 <?= csrf_field(); ?>
@@ -90,15 +96,12 @@
                           </div>
                         </td>
                       </tr>
+                      <?php $no++ ?>
                     <?php endforeach; ?>
                   </tbody>
                 </table>
               </div>
             </div>
-
-
-
-
             <div class="tab-pane fade <?= ($validation->hasError('namaLengkap') || $validation->hasError('email')) ? 'show active' : ''; ?>" id="navs-justified-profile" role="tabpanel">
               <form action="/panel/saveUser" method="POST">
                 <?= csrf_field(); ?>
@@ -106,8 +109,8 @@
                   <div class="mb-3">
                     <label class="form-label" for="namaLengkap">Nama Lengkap</label>
                     <div class="input-group input-group-merge <?= ($validation->hasError('namaLengkap')) ? 'border border-danger rounded' : ''; ?>">
-                      <span id="namaLengkap" class="input-group-text"><i class="fa-solid fa-motorcycle"></i></span>
-                      <input type="text" class="form-control" id="namaLengkap" name="namaLengkap" placeholder="Nama Kendaraan" autofocus />
+                      <span id="namaLengkap" class="input-group-text"><i class="fa-solid fa-user"></i></span>
+                      <input type="text" class="form-control" id="namaLengkap" name="namaLengkap" placeholder="Nama Lengkap..." autofocus />
                     </div>
                     <div class="form-text" style="color:#ff3e1d;"><?= $validation->getError('namaLengkap'); ?></div>
                   </div>
@@ -115,24 +118,24 @@
                   <div class="mb-3 col-md-6">
                     <label class="form-label" for="username">Username</label>
                     <div class="input-group input-group-merge">
-                      <span id="username" class="input-group-text"><i class="fa-solid fa-motorcycle"></i></span>
-                      <input type="text" class="form-control" id="username" name="username" placeholder="xxx@xxx.com" autofocus />
+                      <span id="username" class="input-group-text"><i class="fa-solid fa-user-pen"></i></span>
+                      <input type="text" class="form-control" id="username" name="username" placeholder="Username..." autofocus />
                     </div>
                   </div>
 
                   <div class="mb-3 col-md-6">
                     <label class="form-label" for="password">Password</label>
                     <div class="input-group input-group-merge">
-                      <span id="password" class="input-group-text"><i class="fa-solid fa-motorcycle"></i></span>
-                      <input type="password" class="form-control" id="password" name="password" placeholder="xxx@xxx.com" autofocus />
+                      <span id="password" class="input-group-text"><i class="fa-solid fa-user-lock"></i></span>
+                      <input type="password" class="form-control" id="password" name="password" placeholder="Masukkan Password..." autofocus />
                     </div>
                   </div>
 
                   <div class="mb-3 col-md-6">
                     <label class="form-label" for="noTelepon">No Telepon</label>
                     <div class="input-group input-group-merge <?= ($validation->hasError('noTelepon')) ? 'border border-danger rounded' : ''; ?> ">
-                      <span id="noTelepon" class="input-group-text"><i class="fa-solid fa-money-bill-wave"></i></span>
-                      <input type="text" id="noTelepon" name="noTelepon" class="form-control" placeholder="Harga Kendaraan" />
+                      <span id="noTelepon" class="input-group-text"><i class="fa-solid fa-phone"></i></span>
+                      <input type="text" id="noTelepon" name="noTelepon" class="form-control" placeholder="Masukkan No Telepon..." />
                     </div>
                     <div class="form-text" style="color:#ff3e1d;"><?= $validation->getError('noTelepon'); ?></div>
                   </div>
@@ -140,8 +143,8 @@
                   <div class="mb-3 col-md-6">
                     <label class="form-label" for="email">Email</label>
                     <div class="input-group input-group-merge <?= ($validation->hasError('email')) ? 'border border-danger rounded' : ''; ?>">
-                      <span id="email" class="input-group-text"><i class="fa-solid fa-motorcycle"></i></span>
-                      <input type="text" class="form-control" id="email" name="email" placeholder="xxx@xxx.com" autofocus />
+                      <span id="email" class="input-group-text"><i class="fa-solid fa-envelope"></i></span>
+                      <input type="text" class="form-control" id="email" name="email" placeholder="Masukkan E-Mail..." autofocus />
                     </div>
                     <div class="form-text" style="color:#ff3e1d;"><?= $validation->getError('email'); ?></div>
                   </div>
@@ -150,8 +153,8 @@
                   <div class="mb-3">
                     <label class="form-label" for="alamat">Alamat</label>
                     <div class="input-group input-group-merge">
-                      <span id="alamat" class="input-group-text"><i class="fa-solid fa-info"></i></span>
-                      <textarea id="alamat" name="alamat" class="form-control" placeholder="Detail Kendaraan"></textarea>
+                      <span id="alamat" class="input-group-text"><i class="fa-solid fa-location-dot"></i></span>
+                      <textarea id="alamat" name="alamat" class="form-control" placeholder="Masukkan Alamat User..."></textarea>
                     </div>
                   </div>
 
@@ -189,94 +192,7 @@
     </div>
     <!-- /* Content -->
 
-    <!-- Modal  -->
-    <div class="col-lg-4 col-md-3">
-      <!-- Modal -->
-      <div class="modal fade" id="modalLong" tabindex="-1" aria-hidden="true" data-bs-backdrop="static">
-        <div class="modal-dialog modal-xl" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="modalLongTitle">Tambah Data User Baru</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
 
-              <form action="/panel/saveUser" method="POST">
-                <?= csrf_field(); ?>
-                <div class="row">
-                  <div class="mb-3">
-                    <label class="form-label" for="namaLengkap">Nama Lengkap</label>
-                    <div class="input-group input-group-merge <?= ($validation->hasError('namaLengkap')) ? 'border border-danger rounded' : ''; ?>">
-                      <span id="namaLengkap" class="input-group-text"><i class="fa-solid fa-motorcycle"></i></span>
-                      <input type="text" class="form-control" id="namaLengkap" name="namaLengkap" placeholder="Nama Kendaraan" autofocus />
-                    </div>
-                    <div class="form-text" style="color:#ff3e1d;"><?= $validation->getError('namaLengkap'); ?></div>
-                  </div>
-
-                  <div class="mb-3 col-md-6">
-                    <label class="form-label" for="username">Username</label>
-                    <div class="input-group input-group-merge">
-                      <span id="username" class="input-group-text"><i class="fa-solid fa-motorcycle"></i></span>
-                      <input type="text" class="form-control" id="username" name="username" placeholder="xxx@xxx.com" autofocus />
-                    </div>
-                  </div>
-
-                  <div class="mb-3 col-md-6">
-                    <label class="form-label" for="password">Password</label>
-                    <div class="input-group input-group-merge">
-                      <span id="password" class="input-group-text"><i class="fa-solid fa-motorcycle"></i></span>
-                      <input type="password" class="form-control" id="password" name="password" placeholder="xxx@xxx.com" autofocus />
-                    </div>
-                  </div>
-
-                  <div class="mb-3 col-md-6">
-                    <label class="form-label" for="noTelepon">No Telepon</label>
-                    <div class="input-group input-group-merge <?= ($validation->hasError('noTelepon')) ? 'border border-danger rounded' : ''; ?> ">
-                      <span id="noTelepon" class="input-group-text"><i class="fa-solid fa-money-bill-wave"></i></span>
-                      <input type="text" id="noTelepon" name="noTelepon" class="form-control" placeholder="Harga Kendaraan" />
-                    </div>
-                    <div class="form-text" style="color:#ff3e1d;"><?= $validation->getError('noTelepon'); ?></div>
-                  </div>
-
-                  <div class="mb-3 col-md-6">
-                    <label class="form-label" for="email">Email</label>
-                    <div class="input-group input-group-merge">
-                      <span id="email" class="input-group-text"><i class="fa-solid fa-motorcycle"></i></span>
-                      <input type="text" class="form-control" id="email" name="email" placeholder="xxx@xxx.com" autofocus />
-                    </div>
-                  </div>
-
-
-                  <div class="mb-3">
-                    <label class="form-label" for="alamat">Alamat</label>
-                    <div class="input-group input-group-merge">
-                      <span id="alamat" class="input-group-text"><i class="fa-solid fa-info"></i></span>
-                      <textarea id="alamat" name="alamat" class="form-control" placeholder="Detail Kendaraan"></textarea>
-                    </div>
-                  </div>
-
-                  <div class="mb-3">
-                    <label class="form-label" for="avatarUser">Gambar</label>
-                    <div class="input-group input-group-merge">
-                      <span id="avatarUser" class="input-group-text"><i class="fa-solid fa-motorcycle"></i></span>
-                      <input type="text" class="form-control" id="avatarUser" name="avatarUser" placeholder="Gambar Kendaraan" />
-                    </div>
-                  </div>
-                </div>
-
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
-                Close
-              </button>
-              <button type="submit" class="btn btn-primary">Save changes</button>
-            </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- /* Modal  -->
 
 
 

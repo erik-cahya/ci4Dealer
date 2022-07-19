@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 19, 2022 at 12:41 PM
--- Server version: 10.4.20-MariaDB
--- PHP Version: 7.4.21
+-- Generation Time: Jul 19, 2022 at 09:20 PM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -42,7 +42,7 @@ CREATE TABLE `tb_account` (
 --
 
 INSERT INTO `tb_account` (`id_account`, `username`, `password`, `id_user`, `level`, `created_at`, `updated_at`) VALUES
-(8, 'AAWA010394', 'asdasdasd', 24, 1, '2022-07-19 03:03:20', '2022-07-19 03:03:20');
+(8, 'usernameBaru', 'asdasdasd', 24, 1, '2022-07-19 03:03:20', '2022-07-19 13:15:32');
 
 -- --------------------------------------------------------
 
@@ -98,7 +98,7 @@ CREATE TABLE `tb_user` (
 --
 
 INSERT INTO `tb_user` (`id_user`, `nama_user`, `no_telepon`, `email`, `alamat`, `avatar`, `created_at`, `updated_at`) VALUES
-(24, 'Erik Cahya Pradana', '089522648527', 'erikcp38@gmail.com', 'Jln. Tukad Badung XIV B', '1.png', '2022-07-19 03:03:20', '2022-07-19 03:03:20');
+(24, 'Erik Cahya Pradana', '089522648527', 'erik.cahya841@gmail.com', 'Data Alamat sudah diubah', '1.png', '2022-07-19 03:03:20', '2022-07-19 12:46:47');
 
 --
 -- Indexes for dumped tables
@@ -131,7 +131,7 @@ ALTER TABLE `tb_user`
 -- AUTO_INCREMENT for table `tb_account`
 --
 ALTER TABLE `tb_account`
-  MODIFY `id_account` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id_account` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `tb_product`
@@ -143,7 +143,7 @@ ALTER TABLE `tb_product`
 -- AUTO_INCREMENT for table `tb_user`
 --
 ALTER TABLE `tb_user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- Constraints for dumped tables

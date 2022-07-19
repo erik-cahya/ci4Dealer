@@ -39,11 +39,13 @@ $routes->set404Override();
 
 // My Routes
 $routes->get('/', 'Pages::dashboard');
-$routes->get('about', 'Pages::about');
-$routes->get('login', 'Pages::login');
-$routes->get('register', 'Pages::register');
-$routes->get('penjualan', 'Pages::penjualan');
-$routes->get('product', 'Product::index');
+$routes->get('/about', 'Pages::about');
+$routes->get('/login', 'Pages::login');
+$routes->get('/register', 'Pages::register');
+$routes->get('/penjualan', 'Pages::penjualan');
+$routes->get('/product/detail/(:num)', 'Product::detailProduct/$1');
+$routes->get('/product', 'Product::index');
+
 
 
 $account = "admin";
@@ -51,9 +53,14 @@ if ($account === "admin") {
 
     // Admin Login Panel
     $routes->get('/panel', 'Pages::login',);
+    $routes->get('/panel/editUser/(:segment)', 'AdminPanel::editUser/$1',);
     $routes->get('/panel/(:segment)', 'AdminPanel::$1',);
     $routes->post('/panel/saveKendaraan', 'AdminPanel::saveKendaraan');
     $routes->post('/panel/saveUser', 'AdminPanel::saveUser');
+
+    $routes->post('/panel/updateUser/(:num)', 'AdminPanel::updateUser/$1');
+    $routes->post('/panel/updateAccount/(:num)', 'AdminPanel::updateAccount/$1');
+
     $routes->delete('/panel/(:num)', 'AdminPanel::delete/$1');
 } else {
     // User Login Panel

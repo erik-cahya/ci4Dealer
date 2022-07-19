@@ -17,7 +17,7 @@ class UserModel extends Model
         if ($id_user == false) {
             return $this->join('tb_account', 'tb_user.id_user = tb_account.id_user')->findAll();
         }
-        return $this->where(['id_user' => $id_user])->first();
+        return $this->join('tb_account', 'tb_user.id_user = tb_account.id_user')->where(['tb_account.id_user' => $id_user])->first();
     }
 
     public function getUserNama($nama_user)

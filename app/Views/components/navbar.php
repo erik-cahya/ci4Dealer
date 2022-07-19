@@ -4,7 +4,7 @@
         <nav class="navbar navbar-expand-lg navbar-light main_box">
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
-                <a class="navbar-brand logo_h" href="/"><img src="img/fav.png" alt="">
+                <a class="navbar-brand logo_h" href="/"><img src="<?= base_url(); ?>/img/fav.png" alt="">
                     <label class=" brandLabel ml-2">MotoShop</label>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -19,7 +19,7 @@
 
                         <!-- Produk -->
 
-                        <li class="nav-item <?= ($title === "MotoShop | About") ? 'active' : '' ?>"><a class="nav-link" href="<?= base_url("/product"); ?>">Produk</a></li>
+                        <li class="nav-item <?= ($title === "MotoShop | Product") || ($title === "MotoShop | Detail Product") ? 'active' : '' ?>"><a class="nav-link" href="<?= base_url("/product"); ?>">Produk</a></li>
 
                         <li class="nav-item <?= ($title === "MotoShop | Form Penjualan") ? 'active' : '' ?>"><a class="nav-link" href="<?= base_url("/penjualan"); ?>">Form Penjualan</a></li>
 

@@ -5,6 +5,7 @@ namespace App\Controllers;
 use App\Models\ProductModel;
 use App\Models\UserModel;
 use App\Models\AccountModel;
+use CodeIgniter\I18n\Time;
 
 class AdminPanel extends BaseController
 {
@@ -179,5 +180,45 @@ class AdminPanel extends BaseController
             session()->setFlashData('pesan', "User Berhasil di Tambahkan");
             return redirect()->to('/panel/manage_account');
         }
+    }
+
+    public function editUser($id_user)
+    {
+        $data = [
+            'title' => 'MotoShop Panel | Manage User Account',
+            'permission' => "Admin Account",
+            'dataUser' => $this->userModel->getUser($id_user),
+            'validation' => \Config\Services::validation()
+        ];
+
+        return view('/adminPanel/edit_user', $data);
+    }
+
+    public function updateUser($id_user)
+    {
+        $this->userModel->save([
+            'id_user' => $id_user,
+            'nama_user' => $this->request->getVar('namaLengkap'),
+            'no_telepon' => $this->request->getVar('noTelepon'),
+            'email' => $this->request->getVar('email'),
+            'alamat' => $this->request->getVar('alamat'),
+            'avatar' => "1.png"
+        ]);
+
+        session()->setFlashData('pesan', "Data User Berhasil di Ubah");
+        return redirect()->to('/panel/manage_account');
+    }
+
+    public function updateAccount($id_account)
+    {
+        $this->accountModel->save([
+            'id_account' => $id_account,
+            'id_user' => $this->request->getVar('id_user'),
+            'username' => $this->request->getVar('username'),
+            'password' => $this->request->getVar('password'),
+            'level' => "1"
+        ]);
+        session()->setFlashData('pesan', "Data User Berhasil di Ubah");
+        return redirect()->to('/panel/manage_account');
     }
 }
