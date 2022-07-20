@@ -54,14 +54,17 @@ if ($account === "admin") {
     // Admin Login Panel
     $routes->get('/panel', 'Pages::login',);
     $routes->get('/panel/editUser/(:segment)', 'AdminPanel::editUser/$1',);
+    $routes->get('/panel/editKendaraan/(:segment)', 'AdminPanel::editKendaraan/$1',);
     $routes->get('/panel/(:segment)', 'AdminPanel::$1',);
     $routes->post('/product/saveKendaraan', 'AdminPanel::saveKendaraan');
     $routes->post('/panel/saveUser', 'AdminPanel::saveUser');
 
     $routes->post('/panel/updateUser/(:num)', 'AdminPanel::updateUser/$1');
+    $routes->post('/panel/updateKendaraan/(:num)', 'AdminPanel::updateKendaraan/$1');
     $routes->post('/panel/updateAccount/(:num)', 'AdminPanel::updateAccount/$1');
 
     $routes->delete('/panel/(:num)', 'AdminPanel::delete/$1');
+    $routes->delete('/panel/deleteKendaraan/(:num)', 'AdminPanel::deleteKendaraan/$1');
 } else {
     // User Login Panel
     $routes->get('/panel', 'UserPanel::index');

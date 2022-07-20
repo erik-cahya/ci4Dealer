@@ -10,7 +10,7 @@ class ProductModel extends Model
     protected $primaryKey = 'id_product';
     protected $useTimestamps = true;
 
-    protected $allowedFields = ['nama_product', 'harga_product', 'tahun', 'detail_kendaraan', 'id_user', 'gambar_product'];
+    protected $allowedFields = ['nama_product', 'harga_product', 'tahun', 'detail_product', 'gambar_product'];
 
     public function getProduct($id_product = false)
     {

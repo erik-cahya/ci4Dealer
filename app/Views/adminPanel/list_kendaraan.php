@@ -48,15 +48,15 @@
                 <div class="row row-cols-1 row-cols-md-3 g-4 mb-5">
                   <?php foreach ($product as $prd) : ?>
                     <div class="col">
-                      <div class="card shadow-none bg-transparent border border-secondary" style="min-height: 600px;">
+                      <div class="card shadow-none bg-transparent border border-secondary" style="min-height:600px;">
                         <img class="card-img-top" src="<?= base_url(); ?>/img/product/e-<?= $prd["gambar_product"]; ?>" alt="Card image cap" />
                         <div class="card-body">
                           <div class="card-title">
                             <span class="card-title h5"><?= $prd["nama_product"]; ?> </span>
-                            <span class="float-end badge bg-label-danger"><?= number_to_currency($prd["harga_product"], 'IDR', 'id_ID') ?></span>
                           </div>
+                          <span class="badge bg-label-danger"><?= number_to_currency($prd["harga_product"], 'IDR', 'id_ID') ?></span>
                           <p class="card-text mt-4">
-                            <?= character_limiter($prd["detail_kendaraan"], 100); ?>
+                            <?= character_limiter($prd["detail_product"], 100); ?>
                           </p>
                         </div>
                         <div class="card-footer">
@@ -67,36 +67,26 @@
                             <i class='bx bx-menu-alt-right'></i>
                           </button>
                           <div class="dropdown-menu">
-                            <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-edit-alt me-1"></i> Edit</a>
-                            <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-trash me-1"></i> Delete</a>
+                            <a class="dropdown-item" href="/panel/editKendaraan/<?= $prd["id_product"]; ?>"><i class="bx bx-edit-alt me-1"></i> Edit</a>
+
+                            <!-- Button Delete -->
+                            <form action="/panel/deleteKendaraan/<?= $prd['id_product']; ?>" method="POST">
+                              <?= csrf_field(); ?>
+                              <input type="hidden" name="_method" value="DELETE">
+                              <button type="submit" class="dropdown-item" onclick="return confirm('Apakah Anda Ingin Delete Data ?');"><i class="bx bx-trash me-1"></i> Delete</button>
+                            </form>
+                            <!-- /* Button Delete -->
+
                           </div>
                         </div>
                       </div>
                     </div>
                   <?php endforeach; ?>
-
-
-
-
-
-
-
-
                   <!-- / Content -->
-
                 </div>
-
-
-
-
               </div>
               <!-- /* Page List Kendaraan -->
-
             </div>
-
-
-
-
 
 
             <div class="tab-pane fade <?= ($validation->hasError('namaLengkap') || $validation->hasError('email')) ? 'show active' : ''; ?>" id="navs-justified-profile" role="tabpanel">

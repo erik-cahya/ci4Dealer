@@ -128,8 +128,7 @@ class AdminPanel extends BaseController
             'nama_product' => $this->request->getVar('namaKendaraan'),
             'harga_product' => $this->request->getVar('hargaKendaraan'),
             'tahun' => $this->request->getVar('tahunKendaraan'),
-            'id_user' => '1',
-            'detail_kendaraan' => $this->request->getVar('detailKendaraan'),
+            'detail_product' => $this->request->getVar('detailKendaraan'),
             'gambar_product' => $this->request->getVar('gambarKendaraan')
         ]);
 
@@ -138,7 +137,43 @@ class AdminPanel extends BaseController
         return redirect()->to('/panel/list_kendaraan');
     }
 
+    public function editKendaraan($id_product)
+    {
+        $data = [
+            'title' => 'MotoShop Panel | Edit Data Kendaraan',
+            'permission' => "Admin Account",
+            'dataKendaraan' => $this->productModel->getProduct($id_product),
+            'validation' => \Config\Services::validation()
+        ];
 
+        return view('/adminPanel/edit_kendaraan', $data);
+    }
+
+    public function updateKendaraan($id_product)
+    {
+
+
+        $this->productModel->save([
+            'id_product' => $id_product,
+            'nama_product' => $this->request->getVar('namaKendaraan'),
+            'harga_product' => $this->request->getVar('hargaKendaraan'),
+            'tahun' => $this->request->getVar('tahun'),
+            'detail_product' => $this->request->getVar('detailKendaraan'),
+            'gambar_product' => "p1.png"
+        ]);
+
+        session()->setFlashData('pesan', "Data Kendaraan Berhasil di Ubah");
+        return redirect()->to('/panel/list_kendaraan');
+    }
+
+    public function deleteKendaraan($id_product)
+    {
+        $this->productModel->delete($id_product);
+        session()->setFlashData('pesan', "Kendaran Berhasil di Hapus");
+        return redirect()->to('panel/list_kendaraan');
+    }
+
+    // /* Kendaraan
 
 
 

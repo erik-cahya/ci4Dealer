@@ -71,8 +71,8 @@
 
             <li class="menu-item 
         <?= ($title === "MotoShop Panel | List Motor") ? 'active open' : '' ?>
-        <?= ($title === "MotoShop Panel | Form Tambah Kendaraan") ? 'active open' : '' ?>
-        <?= ($title === "MotoShop Panel | Form Approval") ? 'active open' : '' ?>">
+        <?= ($title === "MotoShop Panel | Form Approval") ? 'active open' : '' ?>
+        <?= ($title === "MotoShop Panel | Edit Data Kendaraan") ? 'active open' : '' ?>">
 
                 <a href="javascript:void(0);" class="menu-link menu-toggle">
                     <i class="menu-icon tf-icons bx bxs-data"></i>
@@ -81,7 +81,7 @@
                 <ul class="menu-sub">
 
 
-                    <li class="menu-item <?= ($title === "MotoShop Panel | List Motor") ? 'active' : '' ?>">
+                    <li class="menu-item <?= ($title === "MotoShop Panel | List Motor") || ($title === "MotoShop Panel | Edit Data Kendaraan") ? 'active' : '' ?>">
                         <a href="<?= base_url('/panel/list_kendaraan'); ?>" class="menu-link">
                             <div>List Kendaraan</div>
                         </a>

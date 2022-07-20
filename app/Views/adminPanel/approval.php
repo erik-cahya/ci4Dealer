@@ -26,14 +26,16 @@
               <h2 class="accordion-header" id="headingTwo">
                 <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#accordionTwo" aria-expanded="false" aria-controls="accordionTwo">
                   Erik Cahya Pradana
+                  <span class="badge bg-label-warning" style="margin-left:20px;">pending</span>
                 </button>
+                <!-- <p class="badge bg-label-warning me-1 float-end">Pending</p> -->
               </h2>
               <div id="accordionTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
                   <div class="card mb-4">
                     <div class="card-header d-flex justify-content-between align-items-center">
                       <h5 class="mb-0">ADV 150 XG</h5>
-                      <p class="badge bg-label-warning me-1 float-end">Pending</p>
+
                     </div>
                     <div class="text-center">
                       <img src="<?= base_url(); ?>/admin/assets/img/elements/13.jpg" class="rounded" alt="product-image" width="280px">
