@@ -5,7 +5,8 @@ namespace App\Controllers;
 use App\Models\ProductModel;
 use App\Models\UserModel;
 use App\Models\AccountModel;
-use CodeIgniter\I18n\Time;
+
+
 
 class AdminPanel extends BaseController
 {
@@ -15,6 +16,8 @@ class AdminPanel extends BaseController
         $this->userModel = new UserModel();
         $this->productModel = new ProductModel();
         $this->accountModel = new AccountModel();
+
+        helper(['number', 'text']);
     }
 
     public function index()
@@ -68,14 +71,22 @@ class AdminPanel extends BaseController
 
         return view('adminPanel/approval', $data);
     }
-    public function list_motor()
+
+    // Kendaraan
+
+    public function list_kendaraan()
     {
         $data = [
             'title' => 'MotoShop Panel | List Motor',
-            'permission' => "Admin Account"
-        ];
+            'permission' => "Admin Account",
+            'validation' => \Config\Services::validation(),
+            'countUser' => $this->userModel->countUser(),
+            'dataUser' => $this->userModel->getUser(),
+            'product' => $this->productModel->getProduct(),
+            'countProduct' => $this->productModel->countProduct(),
 
-        return view('adminPanel/list_motor', $data);
+        ];
+        return view('adminPanel/list_kendaraan', $data);
     }
 
     public function tambah_kendaraan()
@@ -122,11 +133,17 @@ class AdminPanel extends BaseController
             'gambar_product' => $this->request->getVar('gambarKendaraan')
         ]);
 
-        // toast message
         session()->setFlashData("pesan", "Data Kendaraan Berhasil Ditambahkan");
 
-        return redirect()->to('/panel/tambah_kendaraan');
+        return redirect()->to('/panel/list_kendaraan');
     }
+
+
+
+
+
+
+    // User & Account
 
     public function delete($id)
     {

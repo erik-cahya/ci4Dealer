@@ -61,9 +61,7 @@
             <li class="nav-item">
                 <a class="nav-link" id="home-tab" data-toggle="tab" href="#descrioption" role="tab" aria-controls="descrioption" aria-selected="true">Description</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Specification</a>
-            </li>
+
             <li class="nav-item">
                 <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Comments</a>
             </li>
@@ -72,81 +70,11 @@
             </li>
         </ul>
         <div class="tab-content" id="myTabContent">
+
             <div class="tab-pane fade" id="descrioption" role="tabpanel" aria-labelledby="home-tab">
                 <p><?= $product["detail_kendaraan"]; ?></p>
             </div>
-            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                <div class="table-responsive">
-                    <table class="table">
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <h5>Width</h5>
-                                </td>
-                                <td>
-                                    <h5>128mm</h5>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <h5>Height</h5>
-                                </td>
-                                <td>
-                                    <h5>508mm</h5>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <h5>Depth</h5>
-                                </td>
-                                <td>
-                                    <h5>85mm</h5>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <h5>Weight</h5>
-                                </td>
-                                <td>
-                                    <h5>52gm</h5>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <h5>Quality checking</h5>
-                                </td>
-                                <td>
-                                    <h5>yes</h5>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <h5>Freshness Duration</h5>
-                                </td>
-                                <td>
-                                    <h5>03days</h5>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <h5>When packeting</h5>
-                                </td>
-                                <td>
-                                    <h5>Without touch of hand</h5>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <h5>Each Box contains</h5>
-                                </td>
-                                <td>
-                                    <h5>60pcs</h5>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+
             <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
                 <div class="row">
                     <div class="col-lg-6">

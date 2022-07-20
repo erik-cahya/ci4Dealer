@@ -39,11 +39,8 @@
             </li>
           </ul>
 
-
           <div class="tab-content">
-
             <div class="tab-pane fade <?= ($validation->hasError('namaLengkap') || $validation->hasError('email')) ? '' : 'show active'; ?>" id="navs-justified-home" role="tabpanel">
-
               <div class="table-responsive text-nowrap" style="position: relative;height: 500px;overflow: auto; display: block;">
                 <table class="table">
                   <thead>
@@ -191,10 +188,11 @@
 
     </div>
     <!-- /* Content -->
+  </div>
 
 
 
 
 
 
-    <?= $this->endSection(); ?>
+  <?= $this->endSection(); ?>

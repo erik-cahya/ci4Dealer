@@ -79,14 +79,10 @@
                     <div>Manage Data Motor</div>
                 </a>
                 <ul class="menu-sub">
-                    <li class="menu-item <?= ($title === "MotoShop Panel | Form Tambah Kendaraan") ? 'active' : '' ?>">
-                        <a href="<?= base_url('/panel/tambah_kendaraan'); ?>" class="menu-link">
-                            <div>Tambah Kendaraan</div>
-                        </a>
-                    </li>
+
 
                     <li class="menu-item <?= ($title === "MotoShop Panel | List Motor") ? 'active' : '' ?>">
-                        <a href="<?= base_url('/panel/list_motor'); ?>" class="menu-link">
+                        <a href="<?= base_url('/panel/list_kendaraan'); ?>" class="menu-link">
                             <div>List Kendaraan</div>
                         </a>
                     </li>

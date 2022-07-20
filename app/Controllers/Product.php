@@ -26,14 +26,17 @@ class Product extends BaseController
 
     public function detailProduct($id_product)
     {
-
         $data = [
             'title' => 'MotoShop | Detail Product',
             'product' => $this->productModel->getProduct($id_product)
         ];
 
-
-
         return view('/product/detail_product', $data);
     }
+
+
+
+    /* ================================================================================================= 
+    Admin Panel 
+    =================================================================================================  */
 }

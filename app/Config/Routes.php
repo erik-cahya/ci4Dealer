@@ -55,7 +55,7 @@ if ($account === "admin") {
     $routes->get('/panel', 'Pages::login',);
     $routes->get('/panel/editUser/(:segment)', 'AdminPanel::editUser/$1',);
     $routes->get('/panel/(:segment)', 'AdminPanel::$1',);
-    $routes->post('/panel/saveKendaraan', 'AdminPanel::saveKendaraan');
+    $routes->post('/product/saveKendaraan', 'AdminPanel::saveKendaraan');
     $routes->post('/panel/saveUser', 'AdminPanel::saveUser');
 
     $routes->post('/panel/updateUser/(:num)', 'AdminPanel::updateUser/$1');
