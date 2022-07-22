@@ -56,7 +56,7 @@
 
 
 
-                                    <form action="/panel/updateUser/<?= $dataUser["id_user"]; ?>" method="POST">
+                                    <form action="/admin/updateUser/<?= $dataUser["id_user"]; ?>" method="POST">
                                         <?= csrf_field(); ?>
                                         <div class="row">
                                             <div class="mb-3">
@@ -103,7 +103,7 @@
                                     <h5 class="mb-0">Edit User Account</h5>
                                 </div>
                                 <div class="card-body">
-                                    <form action="/panel/updateAccount/<?= $dataUser["id_account"]; ?>" method="POST">
+                                    <form action="/admin/updateAccount/<?= $dataUser["id_account"]; ?>" method="POST">
                                         <input type="hidden" class="form-control" name="id_user" id="id_user" value="<?= $dataUser["id_user"]; ?>" />
                                         <div class="row mb-3">
                                             <label class="col-sm-2 col-form-label" for="username">Username</label>
@@ -144,7 +144,7 @@
                                     <p class="mb-0">Once you delete your account, there is no going back. Please be certain.</p>
                                 </div>
                             </div>
-                            <form action="/panel/<?= $dataUser['id_user']; ?>" method="POST">
+                            <form action="/admin/<?= $dataUser['id_user']; ?>" method="POST">
                                 <?= csrf_field(); ?>
                                 <input type="hidden" name="_method" value="DELETE">
                                 <button type="submit" class="btn btn-danger deactivate-account" onclick="return confirm('Apakah Anda Ingin Delete Data ?');"><i class="bx bx-trash me-1"></i> Delete</button>

@@ -42,7 +42,7 @@
                     <ul class="list">
                         <li><a class="active" href="#"><span>Kategori</span> : Sepeda Motor</a></li>
                     </ul>
-                    <p><?= $product["detail_product"]; ?></p>
+                    <p><?= $product["detail_kendaraan"]; ?></p>
 
                     <div class="card_area d-flex align-items-center">
                         <a class="primary-btn" href="#">Order</a>
@@ -72,7 +72,7 @@
         <div class="tab-content" id="myTabContent">
 
             <div class="tab-pane fade" id="descrioption" role="tabpanel" aria-labelledby="home-tab">
-                <p><?= $product["detail_product"]; ?></p>
+                <p><?= $product["detail_kendaraan"]; ?></p>
             </div>
 
             <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">

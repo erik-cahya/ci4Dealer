@@ -51,7 +51,7 @@
 
 
 
-                                    <form action="/panel/updateKendaraan/<?= $dataKendaraan["id_product"]; ?>" method="POST">
+                                    <form action="/admin/updateKendaraan/<?= $dataKendaraan["id_product"]; ?>" method="POST">
                                         <?= csrf_field(); ?>
                                         <div class="row">
 

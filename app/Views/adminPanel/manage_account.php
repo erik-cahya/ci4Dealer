@@ -78,12 +78,12 @@
                             <div class="dropdown-menu">
 
                               <!-- Button Edit -->
-                              <a class="dropdown-item" href="/panel/editUser/<?= $user["id_user"]; ?>"><i class="bx bx-edit-alt me-1"></i> Edit</a>
+                              <a class="dropdown-item" href="/admin/editUser/<?= $user["id_user"]; ?>"><i class="bx bx-edit-alt me-1"></i> Edit</a>
                               <!-- /*Button Edit -->
 
 
                               <!-- Button Delete -->
-                              <form action="/panel/<?= $user['id_user']; ?>" method="POST">
+                              <form action="/admin/<?= $user['id_user']; ?>" method="POST">
                                 <?= csrf_field(); ?>
                                 <input type="hidden" name="_method" value="DELETE">
                                 <button type="submit" class="dropdown-item" onclick="return confirm('Apakah Anda Ingin Menghapus Account ?');"><i class="bx bx-trash me-1"></i> Delete</button>
@@ -100,7 +100,7 @@
               </div>
             </div>
             <div class="tab-pane fade <?= ($validation->hasError('namaLengkap') || $validation->hasError('email')) ? 'show active' : ''; ?>" id="navs-justified-profile" role="tabpanel">
-              <form action="/panel/saveUser" method="POST">
+              <form action="/admin/saveUser" method="POST">
                 <?= csrf_field(); ?>
                 <div class="row">
                   <div class="mb-3">

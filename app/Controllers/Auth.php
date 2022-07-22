@@ -28,21 +28,27 @@ class Auth extends BaseController
     {
 
         $inputUsername = $this->request->getVar('username');
+        $inputPassword = $this->request->getVar('password');
         $dataAccount = $this->accountModel->getUsername($inputUsername);
 
         // initializing data dari database
         if ($dataAccount) {
             // cek username
             if ($inputUsername == $dataAccount["username"]) {
-                $session = \Config\Services::session();
-                $session->set("usernameSession", $inputUsername,);
-                $session->set("levelSession", $dataAccount["level"],);
-                $session->set("namaUserSession", $dataAccount["nama_user"],);
+                // cek password
+                if ($inputPassword == $dataAccount["password"]) {
+                    $session = \Config\Services::session();
+                    $session->set("usernameSession", $inputUsername,);
+                    $session->set("levelSession", $dataAccount["level"],);
+                    $session->set("namaUserSession", $dataAccount["nama_user"],);
 
-                if ($session->get("levelSession") == 1) {
-                    return redirect()->to("user/dashboard");
+                    if ($session->get("levelSession") == 1) {
+                        return redirect()->to("user/dashboard");
+                    } else {
+                        return redirect()->to("admin/dashboard");
+                    }
                 } else {
-                    return redirect()->to("admin/dashboard");
+                    dd("Password Salah");
                 }
             }
         } else {

@@ -67,10 +67,10 @@
                             <i class='bx bx-menu-alt-right'></i>
                           </button>
                           <div class="dropdown-menu">
-                            <a class="dropdown-item" href="/panel/editKendaraan/<?= $prd["id_product"]; ?>"><i class="bx bx-edit-alt me-1"></i> Edit</a>
+                            <a class="dropdown-item" href="/admin/editKendaraan/<?= $prd["id_product"]; ?>"><i class="bx bx-edit-alt me-1"></i> Edit</a>
 
                             <!-- Button Delete -->
-                            <form action="/panel/deleteKendaraan/<?= $prd['id_product']; ?>" method="POST">
+                            <form action="/admin/deleteKendaraan/<?= $prd['id_product']; ?>" method="POST">
                               <?= csrf_field(); ?>
                               <input type="hidden" name="_method" value="DELETE">
                               <button type="submit" class="dropdown-item" onclick="return confirm('Apakah Anda Ingin Delete Data ?');"><i class="bx bx-trash me-1"></i> Delete</button>

@@ -151,8 +151,6 @@ class AdminPanel extends BaseController
 
     public function updateKendaraan($id_product)
     {
-
-
         $this->productModel->save([
             'id_product' => $id_product,
             'nama_product' => $this->request->getVar('namaKendaraan'),

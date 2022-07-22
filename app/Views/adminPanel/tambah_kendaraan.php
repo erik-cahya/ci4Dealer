@@ -21,7 +21,7 @@
           <div class="card mb-4">
             <div class="card-body">
 
-              <form action="/panel/saveKendaraan" method="POST">
+              <form action="/admin/saveKendaraan" method="POST">
                 <?= csrf_field(); ?>
 
                 <div class="row">
