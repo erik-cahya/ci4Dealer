@@ -121,7 +121,7 @@ class AdminPanel extends BaseController
             ]
         ])) {
             $validation = \Config\Services::validation();
-            return redirect()->to('/panel/tambah_kendaraan')->withInput()->with('validation', $validation);
+            return redirect()->to('/admin/tambah_kendaraan')->withInput()->with('validation', $validation);
         }
 
         $this->productModel->save([
@@ -134,7 +134,7 @@ class AdminPanel extends BaseController
 
         session()->setFlashData("pesan", "Data Kendaraan Berhasil Ditambahkan");
 
-        return redirect()->to('/panel/list_kendaraan');
+        return redirect()->to('/admin/list_kendaraan');
     }
 
     public function editKendaraan($id_product)
@@ -163,14 +163,14 @@ class AdminPanel extends BaseController
         ]);
 
         session()->setFlashData('pesan', "Data Kendaraan Berhasil di Ubah");
-        return redirect()->to('/panel/list_kendaraan');
+        return redirect()->to('/admin/list_kendaraan');
     }
 
     public function deleteKendaraan($id_product)
     {
         $this->productModel->delete($id_product);
         session()->setFlashData('pesan', "Kendaran Berhasil di Hapus");
-        return redirect()->to('panel/list_kendaraan');
+        return redirect()->to('admin/list_kendaraan');
     }
 
     // /* Kendaraan
@@ -184,7 +184,7 @@ class AdminPanel extends BaseController
     {
         $this->userModel->delete($id);
         session()->setFlashData('pesan', "User Berhasil di Hapus");
-        return redirect()->to('panel/manage_account');
+        return redirect()->to('admin/manage_account');
     }
 
     public function saveUser()
@@ -207,7 +207,7 @@ class AdminPanel extends BaseController
             ]
         ])) {
             $validation = \Config\Services::validation();
-            return redirect()->to('/panel/manage_account')->withInput()->with('validation', $validation);
+            return redirect()->to('/admin/manage_account')->withInput()->with('validation', $validation);
         }
 
         $this->userModel->save([
@@ -230,7 +230,7 @@ class AdminPanel extends BaseController
                 'level' => '1'
             ]);
             session()->setFlashData('pesan', "User Berhasil di Tambahkan");
-            return redirect()->to('/panel/manage_account');
+            return redirect()->to('/admin/manage_account');
         }
     }
 
@@ -258,7 +258,7 @@ class AdminPanel extends BaseController
         ]);
 
         session()->setFlashData('pesan', "Data User Berhasil di Ubah");
-        return redirect()->to('/panel/manage_account');
+        return redirect()->to('/admin/manage_account');
     }
 
     public function updateAccount($id_account)
@@ -271,6 +271,6 @@ class AdminPanel extends BaseController
             'level' => "1"
         ]);
         session()->setFlashData('pesan', "Data User Berhasil di Ubah");
-        return redirect()->to('/panel/manage_account');
+        return redirect()->to('/admin/manage_account');
     }
 }

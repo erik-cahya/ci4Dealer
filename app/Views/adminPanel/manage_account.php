@@ -86,7 +86,7 @@
                               <form action="/panel/<?= $user['id_user']; ?>" method="POST">
                                 <?= csrf_field(); ?>
                                 <input type="hidden" name="_method" value="DELETE">
-                                <button type="submit" class="dropdown-item" onclick="return confirm('Apakah Anda Ingin Delete Data ?');"><i class="bx bx-trash me-1"></i> Delete</button>
+                                <button type="submit" class="dropdown-item" onclick="return confirm('Apakah Anda Ingin Menghapus Account ?');"><i class="bx bx-trash me-1"></i> Delete</button>
                               </form>
                               <!-- /* Button Delete -->
                             </div>

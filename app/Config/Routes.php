@@ -38,9 +38,14 @@ $routes->set404Override();
 // $routes->get('/', 'Home::index');
 
 // My Routes
+// $routes->get('/', 'Auth::redirect');
+// $routes->get('/auth', 'Auth::index');
+$routes->get('/login', 'Auth::index');
+$routes->post('/login', 'Auth::login');
+$routes->get('/logout', 'Auth::logout');
+
 $routes->get('/', 'Pages::dashboard');
 $routes->get('/about', 'Pages::about');
-$routes->get('/login', 'Pages::login');
 $routes->get('/register', 'Pages::register');
 $routes->get('/penjualan', 'Pages::penjualan');
 $routes->get('/product/detail/(:num)', 'Product::detailProduct/$1');
@@ -48,28 +53,29 @@ $routes->get('/product', 'Product::index');
 
 
 
-$account = "admin";
-if ($account === "admin") {
 
-    // Admin Login Panel
-    $routes->get('/panel', 'Pages::login',);
-    $routes->get('/panel/editUser/(:segment)', 'AdminPanel::editUser/$1',);
-    $routes->get('/panel/editKendaraan/(:segment)', 'AdminPanel::editKendaraan/$1',);
-    $routes->get('/panel/(:segment)', 'AdminPanel::$1',);
-    $routes->post('/product/saveKendaraan', 'AdminPanel::saveKendaraan');
-    $routes->post('/panel/saveUser', 'AdminPanel::saveUser');
 
-    $routes->post('/panel/updateUser/(:num)', 'AdminPanel::updateUser/$1');
-    $routes->post('/panel/updateKendaraan/(:num)', 'AdminPanel::updateKendaraan/$1');
-    $routes->post('/panel/updateAccount/(:num)', 'AdminPanel::updateAccount/$1');
+// Admin Login Panel
+$routes->get('/admin', 'Pages::login',);
+$routes->get('/admin/editUser/(:segment)', 'AdminPanel::editUser/$1',);
+$routes->get('/admin/(:segment)', 'AdminPanel::$1',);
+$routes->get('/admin/editKendaraan/(:segment)', 'AdminPanel::editKendaraan/$1',);
+$routes->post('/product/saveKendaraan', 'AdminPanel::saveKendaraan');
+$routes->post('/admin/saveUser', 'AdminPanel::saveUser');
 
-    $routes->delete('/panel/(:num)', 'AdminPanel::delete/$1');
-    $routes->delete('/panel/deleteKendaraan/(:num)', 'AdminPanel::deleteKendaraan/$1');
-} else {
-    // User Login Panel
-    $routes->get('/panel', 'UserPanel::index');
-    $routes->get('/panel/(:segment)', 'UserPanel::$1');
-}
+$routes->post('/admin/updateUser/(:num)', 'AdminPanel::updateUser/$1');
+$routes->post('/admin/updateKendaraan/(:num)', 'AdminPanel::updateKendaraan/$1');
+$routes->post('/admin/updateAccount/(:num)', 'AdminPanel::updateAccount/$1');
+
+$routes->delete('/admin/(:num)', 'AdminPanel::delete/$1');
+$routes->delete('/admin/deleteKendaraan/(:num)', 'AdminPanel::deleteKendaraan/$1');
+
+
+
+// User Login Panel
+$routes->get('/user', 'UserPanel::index');
+$routes->get('/user/(:segment)', 'UserPanel::$1');
+
 
 
 

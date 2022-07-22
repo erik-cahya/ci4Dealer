@@ -2,15 +2,19 @@
 
 namespace App\Controllers;
 
-use CodeIgniter\View\ViewDecoratorInterface;
 
 class Pages extends BaseController
 {
+
+
     public function dashboard()
     {
         $data = [
             'title' => 'MotoShop | Dashboard'
         ];
+
+        // return redirect()->to('/panel/penjualan');
+
         return view('/pages/dashboard', $data);
     }
 
@@ -20,15 +24,6 @@ class Pages extends BaseController
             'title' => 'MotoShop | About'
         ];
         return view('/pages/about', $data);
-    }
-
-    public function login()
-    {
-        $data = [
-            'title' => 'Motoshop | Login'
-        ];
-
-        return view('pages/login', $data);
     }
 
     public function penjualan()

@@ -49,7 +49,7 @@
     <ul class="menu-inner py-1">
         <!-- Dashboard -->
         <li class="menu-item <?= ($title === "MotoShop Panel | Dashboard") ? 'active' : '' ?>">
-            <a href="<?= base_url(); ?>/panel/dashboard" class="menu-link">
+            <a href="<?= base_url(); ?>/admin/dashboard" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-home-circle"></i>
                 <div data-i18n="Analytics">Dashboard</div>
             </a>
@@ -63,7 +63,7 @@
         <!-- Admin Account Menu  -->
         <?php if ($permission === "Admin Account") : ?>
             <li class="menu-item <?= ($title === "MotoShop Panel | Manage User Account") ? 'active' : '' ?>">
-                <a href="<?= base_url(); ?>/panel/manage_account" class="menu-link">
+                <a href="<?= base_url(); ?>/admin/manage_account" class="menu-link">
                     <i class='menu-icon tf bx bxs-user-account'></i>
                     Manage Account
                 </a>
@@ -82,13 +82,13 @@
 
 
                     <li class="menu-item <?= ($title === "MotoShop Panel | List Motor") || ($title === "MotoShop Panel | Edit Data Kendaraan") ? 'active' : '' ?>">
-                        <a href="<?= base_url('/panel/list_kendaraan'); ?>" class="menu-link">
+                        <a href="<?= base_url('/admin/list_kendaraan'); ?>" class="menu-link">
                             <div>List Kendaraan</div>
                         </a>
                     </li>
 
                     <li class="menu-item <?= ($title === "MotoShop Panel | Form Approval") ? 'active' : '' ?>">
-                        <a href="<?= base_url('/panel/approval'); ?>" class="menu-link">
+                        <a href="<?= base_url('/admin/approval'); ?>" class="menu-link">
                             <div>Approval Order</div>
                         </a>
                     </li>
@@ -100,7 +100,7 @@
         <?php if ($permission === "User Account") : ?>
 
             <li class="menu-item <?= ($title === "MotoShop Panel | Form Pengajuan") ? 'active' : '' ?>">
-                <a href="<?= base_url("/panel/penjualan"); ?>" class="menu-link">
+                <a href="<?= base_url("/admin/penjualan"); ?>" class="menu-link">
                     <i class="menu-icon fa-solid fa-motorcycle"></i>
                     Order Kendaraan
                 </a>
@@ -114,7 +114,7 @@
             <span class="menu-header-text">My Account</span>
         </li>
         <li class="menu-item <?= ($title === "MotoShop Panel | My Account") ? 'active' : '' ?>">
-            <a href="<?= base_url(); ?>/panel/account" class="menu-link">
+            <a href="<?= base_url(); ?>/admin/account" class="menu-link">
                 <i class="menu-icon tf bx bxs-user"></i>
                 Account
             </a>

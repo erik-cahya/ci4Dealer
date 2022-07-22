@@ -27,7 +27,13 @@
                     <ul class="nav navbar-nav navbar-right mt-2">
                         <li></li>
                         <li class="nav-item ">
-                            <a class="primary-btn mr-4" href="<?= base_url("/login"); ?>">Login</a>
+                            <?php if (session()->get("usernameSession") == null) : ?>
+                                <a class="primary-btn mr-4" href="<?= base_url("/login"); ?>">Login</a>
+                            <?php else : ?>
+                                <a class="primary-btn mr-4" href="<?= base_url("/logout"); ?>">Logout</a>
+                            <?php endif; ?>
+
+
                         </li>
                     </ul>
                 </div>
