@@ -5,6 +5,13 @@ namespace App\Controllers;
 class UserPanel extends BaseController
 {
 
+    public function __construct()
+    {
+        if (session()->get('levelSession') == null || session()->get('levelSession') == 0) {
+            throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
+        }
+    }
+
     public function index()
     {
         $data = [

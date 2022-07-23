@@ -18,7 +18,7 @@ class AccountModel extends Model
         if ($id_account == false) {
             return $this->join('tb_user', 'tb_account.id_user = tb_user.id_user')->findAll();
         }
-        return $this->join('tb_user', 'tb_account.id_user = tb_user.id_user')->where(['tb_account.id_user' => $id_account])->first();
+        return $this->join('tb_user', 'tb_account.id_user = tb_user.id_user')->where(['tb_account.id_account' => $id_account])->first();
     }
 
     public function getUsername($username)

@@ -49,7 +49,7 @@
     <ul class="menu-inner py-1">
         <!-- Dashboard -->
         <li class="menu-item <?= ($title === "MotoShop Panel | Dashboard") ? 'active' : '' ?>">
-            <a href="<?= base_url(); ?>/admin/dashboard" class="menu-link">
+            <a href="<?= base_url(); ?><?= (session()->get('levelSession') == 0 ? '/admin/dashboard' : '/user/dashboard'); ?>" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-home-circle"></i>
                 <div data-i18n="Analytics">Dashboard</div>
             </a>
@@ -100,7 +100,7 @@
         <?php if ($permission === "User Account") : ?>
 
             <li class="menu-item <?= ($title === "MotoShop Panel | Form Pengajuan") ? 'active' : '' ?>">
-                <a href="<?= base_url("/admin/penjualan"); ?>" class="menu-link">
+                <a href="<?= base_url("/user/penjualan"); ?>" class="menu-link">
                     <i class="menu-icon fa-solid fa-motorcycle"></i>
                     Order Kendaraan
                 </a>

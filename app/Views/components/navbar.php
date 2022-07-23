@@ -21,7 +21,6 @@
 
                         <li class="nav-item <?= ($title === "MotoShop | Product") || ($title === "MotoShop | Detail Product") ? 'active' : '' ?>"><a class="nav-link" href="<?= base_url("/product"); ?>">Produk</a></li>
 
-                        <li class="nav-item <?= ($title === "MotoShop | Form Penjualan") ? 'active' : '' ?>"><a class="nav-link" href="<?= base_url("/penjualan"); ?>">Form Penjualan</a></li>
 
                     </ul>
                     <ul class="nav navbar-nav navbar-right mt-2">

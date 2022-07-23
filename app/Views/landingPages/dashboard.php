@@ -1,4 +1,4 @@
-<?= $this->extend('layouts/template'); ?>
+<?= $this->extend('layouts/layoutLandingPage'); ?>
 
 <?= $this->section('content'); ?>
 <!-- start banner Area -->

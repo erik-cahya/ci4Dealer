@@ -1,4 +1,4 @@
-<?= $this->extend('layouts/templateAdminPanel'); ?>
+<?= $this->extend('layouts/layoutPanel'); ?>
 <?= $this->section('content'); ?>
 
 <!-- Layout container -->

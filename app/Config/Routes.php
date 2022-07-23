@@ -39,36 +39,35 @@ $routes->set404Override();
 
 // My Routes
 // $routes->get('/', 'Auth::redirect');
-// $routes->get('/auth', 'Auth::index');
 $routes->get('/login', 'Auth::index');
 $routes->post('/login', 'Auth::login');
 $routes->get('/logout', 'Auth::logout');
+$routes->get('/register', 'Auth::register');
+$routes->post('/auth/saveAccount', 'Auth::saveAccount');
 
-$routes->get('/', 'Pages::dashboard');
-$routes->get('/about', 'Pages::about');
-$routes->get('/register', 'Pages::register');
-$routes->get('/penjualan', 'Pages::penjualan');
+$routes->get('/', 'LandingPages::dashboard');
 $routes->get('/product/detail/(:num)', 'Product::detailProduct/$1');
 $routes->get('/product', 'Product::index');
+$routes->post('/product/order/(:segment)', 'Product::order/$1');
 
 
 
 
 
 // Admin Login Panel
-$routes->get('/admin', 'Pages::login',);
-$routes->get('/admin/editUser/(:segment)', 'AdminPanel::editUser/$1',);
+// routes kendaraan
 $routes->get('/admin/(:segment)', 'AdminPanel::$1',);
+$routes->get('/admin/editUser/(:segment)', 'AdminPanel::editUser/$1',);
 $routes->get('/admin/editKendaraan/(:segment)', 'AdminPanel::editKendaraan/$1',);
 $routes->post('/product/saveKendaraan', 'AdminPanel::saveKendaraan');
-$routes->post('/admin/saveUser', 'AdminPanel::saveUser');
-
+$routes->delete('/admin/(:num)', 'AdminPanel::delete/$1');
+$routes->delete('/admin/deleteKendaraan/(:num)', 'AdminPanel::deleteKendaraan/$1');
+// route user
 $routes->post('/admin/updateUser/(:num)', 'AdminPanel::updateUser/$1');
 $routes->post('/admin/updateKendaraan/(:num)', 'AdminPanel::updateKendaraan/$1');
 $routes->post('/admin/updateAccount/(:num)', 'AdminPanel::updateAccount/$1');
 
-$routes->delete('/admin/(:num)', 'AdminPanel::delete/$1');
-$routes->delete('/admin/deleteKendaraan/(:num)', 'AdminPanel::deleteKendaraan/$1');
+
 
 
 

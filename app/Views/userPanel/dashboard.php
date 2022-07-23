@@ -1,4 +1,4 @@
-<?= $this->extend('layouts/templateAdminPanel'); ?>
+<?= $this->extend('layouts/layoutPanel'); ?>
 <?= $this->section('content'); ?>
 
 <!-- Layout container -->
@@ -13,9 +13,10 @@
         <!-- Content -->
 
         <div class="container-xxl flex-grow-1 container-p-y">
-            <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Seller /</span> Dashboard</h4>
+            <h4 class="fw-bold py-3 mb-4 d-inline"><span class="text-muted fw-light">Seller /</span> Dashboard</h4>
+            <span class="float-end"><a href="<?= base_url('/product'); ?>"> Go To Product</a></span>
 
-            <div class="row row-cols-1 row-cols-md-3 g-4 mb-5">
+            <div class="row row-cols-1 row-cols-md-3 g-4 mb-5 mt-2">
 
                 <div class="col">
                     <div class="card h-100">

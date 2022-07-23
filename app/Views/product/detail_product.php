@@ -1,4 +1,4 @@
-<?= $this->extend('layouts/template'); ?>
+<?= $this->extend('layouts/layoutLandingPage'); ?>
 <?= $this->section('content'); ?>
 <!-- Start Banner Area -->
 <section class="banner-area organic-breadcrumb">
@@ -20,36 +20,28 @@
 <!--================Single Product Area =================-->
 <div class="product_image_area">
     <div class="container">
-        <div class="row s_product_inner">
-            <div class="col-lg-6">
-                <div class="s_Product_carousel">
-                    <div class="single-prd-item">
-                        <img class="img-fluid" src="<?= base_url(); ?>/img/product/e-<?= $product["gambar_product"] ?>" alt="">
-                    </div>
-                    <div class="single-prd-item">
-                        <img class="img-fluid" src="<?= base_url(); ?>/img/product/e-<?= $product["gambar_product"] ?>" alt="">
-                    </div>
-                    <div class="single-prd-item">
-                        <img class="img-fluid" src="<?= base_url(); ?>/img/product/e-<?= $product["gambar_product"] ?>" alt="">
+
+        <form action="<?= base_url(); ?>/product/order/<?= $product["id_product"]; ?>" method="POST">
+            <div class="row s_product_inner">
+                <div class="col-lg-6">
+                    <img class="img-fluid" src="<?= base_url(); ?>/img/product/e-<?= $product["gambar_product"] ?>" alt="">
+                </div>
+                <div class="col-lg-5 offset-lg-1">
+                    <div class="s_product_text">
+                        <h3><?= $product["nama_product"]; ?></h3>
+                        <h2><?= number_to_currency($product["harga_product"], 'IDR', 'id_ID') ?></h2>
+                        <ul class="list">
+                            <li><a class="active" href="#"><span>Kategori</span> : Sepeda Motor</a></li>
+                        </ul>
+                        <p><?= $product["detail_product"]; ?></p>
+
+                        <div class="card_area d-flex align-items-center">
+                            <button type="submit" class="primary-btn">Order</button>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-5 offset-lg-1">
-                <div class="s_product_text">
-                    <h3><?= $product["nama_product"]; ?></h3>
-                    <h2><?= number_to_currency($product["harga_product"], 'IDR', 'id_ID') ?></h2>
-
-                    <ul class="list">
-                        <li><a class="active" href="#"><span>Kategori</span> : Sepeda Motor</a></li>
-                    </ul>
-                    <p><?= $product["detail_kendaraan"]; ?></p>
-
-                    <div class="card_area d-flex align-items-center">
-                        <a class="primary-btn" href="#">Order</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+        </form>
     </div>
 </div>
 <!--================End Single Product Area =================-->
@@ -61,7 +53,6 @@
             <li class="nav-item">
                 <a class="nav-link" id="home-tab" data-toggle="tab" href="#descrioption" role="tab" aria-controls="descrioption" aria-selected="true">Description</a>
             </li>
-
             <li class="nav-item">
                 <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Comments</a>
             </li>
@@ -70,11 +61,9 @@
             </li>
         </ul>
         <div class="tab-content" id="myTabContent">
-
             <div class="tab-pane fade" id="descrioption" role="tabpanel" aria-labelledby="home-tab">
-                <p><?= $product["detail_kendaraan"]; ?></p>
+                <p><?= $product["detail_product"]; ?></p>
             </div>
-
             <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
                 <div class="row">
                     <div class="col-lg-6">

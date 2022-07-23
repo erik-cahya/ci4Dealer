@@ -15,7 +15,7 @@
              <li class="nav-item navbar-dropdown dropdown-user dropdown">
                  <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
                      <div class="avatar avatar-online">
-                         <img src="<?= base_url('/admin/assets/img/avatars/1.png'); ?>" alt class="w-px-40 h-auto rounded-circle" />
+                         <img src="<?= base_url('/admin/assets/img/avatars/' . session()->get("gambarUserSession")); ?>" alt class="w-px-40 h-auto rounded-circle" />
                      </div>
                  </a>
                  <ul class="dropdown-menu dropdown-menu-end">
@@ -29,7 +29,12 @@
                                  </div>
                                  <div class="flex-grow-1">
                                      <span class="fw-semibold d-block"><?= session()->get("namaUserSession"); ?></span>
-                                     <small class="text-muted"><?= $permission; ?></small>
+
+                                     <?php if (session()->get("levelSession") == 0) : ?>
+                                         <small class="text-muted">Admin Account</small>
+                                     <?php else : ?>
+                                         <small class="text-muted">User Account</small>
+                                     <?php endif ?>
                                  </div>
                              </div>
                          </a>
